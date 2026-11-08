@@ -1,0 +1,78 @@
+{
+  "schema_version": 2,
+  "diagram_type": "workflow",
+  "meta": {
+    "title": "Memorias Vivas Studio - Pipeline Operativo y Experiencia de Cliente",
+    "animation": "trace",
+    "visual_preset": "signal-flow",
+    "quality_profile": "showcase",
+    "output": "docs/architecture.html"
+  },
+  "lanes": [
+    { "id": "family", "label": "1. Familia & Cliente (Hija y Abuelo)" },
+    { "id": "capture", "label": "2. Canal de Captura Cero-Fricción" },
+    { "id": "ai_engine", "label": "3. Factoría IA & Edición Literaria" },
+    { "id": "fulfillment", "label": "4. Imprenta de Lujo & Entrega" }
+  ],
+  "phases": [
+    { "id": "onboarding", "label": "Onboarding & Cofre", "fromCol": 0, "toCol": 1 },
+    { "id": "interviews", "label": "Captura Oral & Bóveda", "fromCol": 2, "toCol": 3, "variant": "emphasis" },
+    { "id": "production", "label": "Compilación Typst & Imprenta", "fromCol": 4, "toCol": 5, "variant": "dashed" }
+  ],
+  "groups": [
+    { "id": "client_intake", "label": "Arranque Emocional", "lane": "family", "fromCol": 0, "toCol": 1, "variant": "emphasis" },
+    { "id": "voice_loop", "label": "Captura Oral Semanal", "lane": "capture", "fromCol": 2, "toCol": 3, "variant": "emphasis" },
+    { "id": "ai_pipeline_grp", "label": "Factoría IA y Compilación", "lane": "ai_engine", "fromCol": 3, "toCol": 4, "variant": "emphasis" },
+    { "id": "pod_dispatch", "label": "Encuadernación & Envío", "lane": "fulfillment", "fromCol": 4, "toCol": 5, "variant": "default" }
+  ],
+  "mainPath": ["buy", "welcome_box", "grandpa", "wa_voice", "storage", "ai_pipeline", "pod_print", "final_delivery"],
+  "nodes": [
+    { "id": "buy", "lane": "family", "col": 0, "type": "external", "label": "Hija (Laura)", "sublabel": "Contrata Pack 490€ - 790€", "width": 136 },
+    { "id": "welcome_box", "lane": "family", "col": 1, "type": "frontend", "label": "Cofre Físico", "sublabel": "Carta formal + Guía", "width": 136 },
+    { "id": "grandpa", "lane": "family", "col": 2, "type": "external", "label": "Abuelo Protagonista", "sublabel": "Graba notas de voz", "tag": "Cero fricción", "width": 136 },
+    { "id": "photos_up", "lane": "family", "col": 3, "type": "frontend", "label": "Bóveda de Fotos", "sublabel": "25-35 fotos del álbum", "width": 136 },
+    { "id": "final_delivery", "lane": "family", "col": 5, "type": "frontend", "label": "Entrega Familiar", "sublabel": "Libro Tapa Dura + QR Voz", "tag": "Emoción pura", "width": 136 },
+
+    { "id": "wa_voice", "lane": "capture", "col": 2, "type": "messagebus", "label": "WhatsApp / Teléfono", "sublabel": "Pregunta semanal guiada", "tag": "n8n Webhook", "width": 136 },
+    { "id": "storage", "lane": "capture", "col": 3, "type": "database", "label": "Vault Privado", "sublabel": "Audios raw encriptados", "tag": "Retención Cero", "width": 136 },
+
+    { "id": "whisper", "lane": "ai_engine", "col": 3, "type": "backend", "label": "Whisper Large-v3", "sublabel": "Audio a Texto fonético", "width": 136 },
+    { "id": "ai_pipeline", "lane": "ai_engine", "col": 4, "type": "backend", "label": "Gemini & Typst", "sublabel": "Estilo 1ª persona + PDF/X", "tag": "Layout perfecto", "width": 144 },
+
+    { "id": "pod_print", "lane": "fulfillment", "col": 5, "type": "cloud", "label": "Imprenta POD de Lujo", "sublabel": "Papel Munken 120g + Tela", "tag": "Coste: 28€", "width": 136 }
+  ],
+  "edges": [
+    { "id": "e1", "from": "buy", "to": "welcome_box", "label": "envío regalo", "variant": "emphasis" },
+    { "id": "e2", "from": "welcome_box", "to": "grandpa", "label": "emoción inicial", "variant": "default" },
+    { "id": "e3", "from": "grandpa", "to": "wa_voice", "label": "audios de vida", "variant": "emphasis" },
+    { "id": "e4", "from": "wa_voice", "to": "storage", "variant": "default" },
+    { "id": "e5", "from": "storage", "to": "whisper", "label": "transcribe", "variant": "default" },
+    { "id": "e6", "from": "storage", "to": "ai_pipeline", "label": "pipeline audio", "variant": "emphasis" },
+    { "id": "e7", "from": "whisper", "to": "ai_pipeline", "variant": "default" },
+    { "id": "e8", "from": "photos_up", "to": "ai_pipeline", "label": "restaura fotos 4K", "variant": "default" },
+    { "id": "e9", "from": "ai_pipeline", "to": "pod_print", "label": "compila PDF/X", "variant": "emphasis" },
+    { "id": "e10", "from": "pod_print", "to": "final_delivery", "label": "entrega con cofre", "variant": "emphasis" }
+  ],
+  "cards": [
+    {
+      "dot": "emerald",
+      "title": "Unit Economics del Pipeline",
+      "items": [
+        "PVP Medio de Venta: 490 € - 790 €",
+        "Coste Total Fabricación (COGS): 56,50 €",
+        "Margen Bruto Operativo: >88%",
+        "Copias extra familiares: 45 € (Coste: 16 €)"
+      ]
+    },
+    {
+      "dot": "cyan",
+      "title": "Garantías de Calidad",
+      "items": [
+        "Cero fricción tecnológica para el mayor (+75 años)",
+        "Retención Cero en APIs de IA (RGPD blindado)",
+        "Impresión artesanal en papel Munken 120g con tela",
+        "Códigos QR discretos con la voz original viva"
+      ]
+    }
+  ]
+}

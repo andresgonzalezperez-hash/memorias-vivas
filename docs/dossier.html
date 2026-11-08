@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memorias Vivas Studio | Dossier Ejecutivo & Comercial</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0d1117;
+      --card-bg: #161b22;
+      --border: #30363d;
+      --accent-gold: #d4af37;
+      --accent-gold-light: #f3e5ab;
+      --text-main: #f0f6fc;
+      --text-muted: #8b949e;
+      --paper-cream: #faf7f2;
+      --paper-ink: #1c1917;
+      --success: #2ea043;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text-main);
+      font-family: 'Inter', -apple-system, sans-serif;
+      line-height: 1.6;
+      padding: 0;
+    }
+
+    header {
+      background: radial-gradient(circle at 50% 0%, rgba(212, 175, 55, 0.15) 0%, transparent 70%), #11151c;
+      border-bottom: 1px solid var(--border);
+      padding: 60px 24px 50px;
+      text-align: center;
+    }
+
+    .brand-pill {
+      display: inline-block;
+      padding: 6px 16px;
+      background: rgba(212, 175, 55, 0.12);
+      border: 1px solid rgba(212, 175, 55, 0.35);
+      border-radius: 999px;
+      color: var(--accent-gold-light);
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 3.4rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+      color: #ffffff;
+      margin-bottom: 16px;
+    }
+
+    h1 span {
+      color: var(--accent-gold);
+      font-style: italic;
+    }
+
+    .tagline {
+      font-size: 1.25rem;
+      color: var(--text-muted);
+      max-width: 720px;
+      margin: 0 auto 30px;
+      font-weight: 300;
+    }
+
+    .nav-tabs {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 24px;
+    }
+
+    .tab-btn {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .tab-btn:hover, .tab-btn.active {
+      color: #fff;
+      border-color: var(--accent-gold);
+      background: rgba(212, 175, 55, 0.1);
+    }
+
+    .container {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+
+    .tab-content { display: none; }
+    .tab-content.active { display: block; animation: fadeIn 0.3s ease; }
+
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+
+    /* Bento Grid Layout */
+    .bento-grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 24px;
+      margin-bottom: 40px;
+    }
+
+    .bento-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 32px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .col-8 { grid-column: span 8; }
+    .col-4 { grid-column: span 4; }
+    .col-6 { grid-column: span 6; }
+    .col-12 { grid-column: span 12; }
+
+    @media (max-width: 900px) {
+      .col-8, .col-4, .col-6, .col-12 { grid-column: span 12; }
+      h1 { font-size: 2.4rem; }
+    }
+
+    h2 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 2.2rem;
+      color: #fff;
+      margin-bottom: 16px;
+    }
+
+    p { color: #c9d1d9; margin-bottom: 16px; font-size: 1.02rem; }
+
+    /* Mockup del Libro Físico */
+    .book-preview-card {
+      background: linear-gradient(135deg, #221c15 0%, #15181e 100%);
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px;
+      text-align: center;
+    }
+
+    .physical-book {
+      width: 200px;
+      height: 280px;
+      background: #1e2638;
+      border-radius: 4px 14px 14px 4px;
+      box-shadow: -8px 12px 30px rgba(0,0,0,0.8), inset 4px 0 8px rgba(255,255,255,0.1);
+      border: 2px solid var(--accent-gold);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      color: var(--accent-gold-light);
+      margin-bottom: 24px;
+      transition: transform 0.3s ease;
+    }
+
+    .physical-book:hover {
+      transform: translateY(-8px) rotate(-1deg);
+    }
+
+    .book-spine-line {
+      position: absolute;
+      left: 14px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: rgba(212, 175, 55, 0.4);
+    }
+
+    .book-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      text-align: center;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      line-height: 1.2;
+    }
+
+    .book-author {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 14px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .book-qr-badge {
+      margin-top: 24px;
+      padding: 6px 12px;
+      background: rgba(212, 175, 55, 0.15);
+      border: 1px solid var(--accent-gold);
+      border-radius: 6px;
+      font-size: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--accent-gold-light);
+    }
+
+    /* Tabla de Precios */
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 16px;
+    }
+
+    @media (max-width: 800px) {
+      .pricing-grid { grid-template-columns: 1fr; }
+    }
+
+    .price-card {
+      background: #11151c;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 32px 24px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .price-card.featured {
+      border-color: var(--accent-gold);
+      box-shadow: 0 0 25px rgba(212, 175, 55, 0.15);
+      background: #161b22;
+    }
+
+    .featured-badge {
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--accent-gold);
+      color: #000;
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+      text-transform: uppercase;
+    }
+
+    .price-amount {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3rem;
+      color: #fff;
+      font-weight: 700;
+      margin: 16px 0 8px;
+    }
+
+    .price-amount span { font-size: 1.1rem; color: var(--text-muted); font-family: 'Inter', sans-serif; font-weight: 400; }
+
+    .feature-list {
+      list-style: none;
+      margin: 24px 0;
+      flex-grow: 1;
+    }
+
+    .feature-list li {
+      font-size: 0.92rem;
+      color: #c9d1d9;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .feature-list li::before {
+      content: "✓";
+      color: var(--accent-gold);
+      font-weight: bold;
+    }
+
+    .btn-buy {
+      background: var(--accent-gold);
+      color: #000;
+      border: none;
+      padding: 12px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+      display: block;
+      transition: background 0.2s;
+    }
+
+    .btn-buy:hover { background: var(--accent-gold-light); }
+
+    /* Timeline de 6 semanas */
+    .timeline {
+      position: relative;
+      padding-left: 30px;
+      margin-top: 24px;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 8px;
+      top: 6px;
+      bottom: 6px;
+      width: 2px;
+      background: var(--border);
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 28px;
+    }
+
+    .timeline-dot {
+      position: absolute;
+      left: -30px;
+      top: 4px;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: var(--card-bg);
+      border: 2px solid var(--accent-gold);
+    }
+
+    .timeline-title {
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: #fff;
+      margin-bottom: 6px;
+    }
+
+    .timeline-desc {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+    }
+
+    .unit-economics-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 16px;
+      font-size: 0.92rem;
+    }
+
+    .unit-economics-table th, .unit-economics-table td {
+      padding: 12px 16px;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .unit-economics-table th {
+      color: var(--text-muted);
+      font-weight: 500;
+      text-transform: uppercase;
+      font-size: 0.78rem;
+    }
+
+    .highlight-cell {
+      color: var(--accent-gold-light);
+      font-weight: 600;
+      font-family: monospace;
+      font-size: 1rem;
+    }
+
+    .pill-green {
+      background: rgba(46, 160, 67, 0.15);
+      color: #3fb950;
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="brand-pill">MEMORIAS VIVAS STUDIO</div>
+    <h1>El Legado de tus Padres, <span>Hecho Libro</span></h1>
+    <p class="tagline">La factoría de biografías familiares para la edad sénior. 6 semanas de conversaciones por voz que se convierten en un libro de lujo encuadernado en tela con sus fotos y su voz viva.</p>
+    
+    <div class="nav-tabs">
+      <button class="tab-btn active" onclick="switchTab('tab-vision')">💎 Propuesta de Valor</button>
+      <button class="tab-btn" onclick="switchTab('tab-proceso')">🎙️ Las 6 Semanas (El Viaje)</button>
+      <button class="tab-btn" onclick="switchTab('tab-precios')">📦 Colecciones & Tarifas</button>
+      <button class="tab-btn" onclick="switchTab('tab-finanzas')">📊 Unit Economics (C-Suite)</button>
+      <button class="tab-btn" onclick="switchTab('tab-viral')">📱 Estrategia Viral & Redes</button>
+      <a href="architecture.html" target="_blank" class="tab-btn" style="text-decoration:none;">📐 Ver Flujo Archify ↗</a>
+    </div>
+  </header>
+
+  <div class="container">
+
+    <!-- TAB 1: VISION Y PRODUCTO -->
+    <div id="tab-vision" class="tab-content active">
+      <div class="bento-grid">
+        <div class="bento-card col-8">
+          <h2>La historia más fascinante no está en Google</h2>
+          <p>Nos pasamos la vida guardando recibos, escrituras notariales y fotos borrosas en el teléfono móvil. Pero cuando nuestros padres cumplen los 75 años, nos invade una prisa silenciosa: <em>¿qué sabemos de verdad sobre cómo empezó su vida?</em></p>
+          <p><strong>Memorias Vivas Studio</strong> resuelve la barrera del tiempo y la tecnología. No le pedimos al mayor que toque un ordenador ni rellene un formulario. Simplemente le llamamos por teléfono o le enviamos una nota de voz a la semana. Un biógrafo asistido por IA escucha, ordena y escribe su vida con rigor literario.</p>
+          <div style="margin-top: 24px; display: flex; gap: 16px; flex-wrap: wrap;">
+            <div style="background: rgba(255,255,255,0.03); border: 1px solid var(--border); padding: 14px 20px; border-radius: 8px;">
+              <div style="font-size: 1.4rem; font-weight: 700; color: var(--accent-gold);">0 Fricción</div>
+              <div style="font-size: 0.85rem; color: var(--text-muted);">Solo notas de voz o teléfono</div>
+            </div>
+            <div style="background: rgba(255,255,255,0.03); border: 1px solid var(--border); padding: 14px 20px; border-radius: 8px;">
+              <div style="font-size: 1.4rem; font-weight: 700; color: var(--accent-gold);">120g Munken</div>
+              <div style="font-size: 0.85rem; color: var(--text-muted);">Papel de museo y tapa dura</div>
+            </div>
+            <div style="background: rgba(255,255,255,0.03); border: 1px solid var(--border); padding: 14px 20px; border-radius: 8px;">
+              <div style="font-size: 1.4rem; font-weight: 700; color: var(--accent-gold);">Voz Viva</div>
+              <div style="font-size: 0.85rem; color: var(--text-muted);">QR con el audio original</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bento-card col-4 book-preview-card">
+          <div class="physical-book">
+            <div class="book-spine-line"></div>
+            <div style="font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 8px; color: var(--accent-gold);">VOLUMEN I</div>
+            <div class="book-title">LOS PASOS DE ANTONIO</div>
+            <div class="book-author">Memorias de una vida</div>
+            <div class="book-qr-badge">
+              <span>🔊</span> Escuchar capítulo
+            </div>
+          </div>
+          <div style="font-size: 0.85rem; color: var(--text-muted);">Encuadernación en tela editorial con estampación dorada a fuego y cinta marcapáginas.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 2: EL PROCESO -->
+    <div id="tab-proceso" class="tab-content">
+      <div class="bento-card col-12">
+        <h2>El Viaje de 6 Semanas (El Guion de Vida)</h2>
+        <p>Una metodología psicológica suave, estructurada cronológicamente para despertar recuerdos dormidos sin cansar al protagonista.</p>
+        
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-title">Semana 1: El Origen, la Tierra y la Infancia</div>
+            <div class="timeline-desc">La casa de los abuelos, los juegos en la calle sin coches, el olor del puchero de los domingos y las primeras travesuras en la escuela.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-title">Semana 2: La Juventud, el Baile y el Primer Amor</div>
+            <div class="timeline-desc">El primer sueldo ganado con las manos, los paseos por la plaza los domingos por la tarde, cómo se conocieron y la pedida de mano.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-title">Semana 3: El Esfuerzo, la Casa Propia y los Hijos</div>
+            <div class="timeline-desc">El nacimiento de los hijos, los años difíciles superados trabajando horas extra y las anécdotas inolvidables de las vacaciones en familia.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-title">Semana 4: Los Amigos del Camino y las Costumbres</div>
+            <div class="timeline-desc">La pandilla de toda la vida, los cafés, las aficiones secretas (el huerto, la pesca, la costura) y los momentos de orgullo profesional.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-title">Semana 5: El Regalo de ser Abuelo</div>
+            <div class="timeline-desc">La complicidad única con los nietos, los secretos que no se cuentan a los padres y la mirada sabia sobre cómo ha cambiado el mundo.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-title">Semana 6: La Cosecha Vital y el Testamento Emocional</div>
+            <div class="timeline-desc">El mensaje íntimo y sincero para sus hijos, los consejos para las siguientes generaciones y las palabras que perdurarán para siempre.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 3: PRECIOS Y TARIFAS -->
+    <div id="tab-precios" class="tab-content">
+      <h2 style="text-align: center; margin-bottom: 8px;">Colecciones Familiares</h2>
+      <p style="text-align: center; color: var(--text-muted); margin-bottom: 32px;">Diseñado como un regalo único y definitivo entre hermanos para aniversarios, 70/80 cumpleaños o bodas de oro.</p>
+
+      <div class="pricing-grid">
+        <div class="price-card">
+          <div style="font-weight: 600; color: var(--accent-gold-light);">ESENCIAL</div>
+          <div class="price-amount">490 € <span>/ proyecto</span></div>
+          <p style="font-size: 0.85rem; color: var(--text-muted);">Ideal para regalo individual de un solo hijo.</p>
+          <ul class="feature-list">
+            <li>1 Libro en Tapa Dura entelada</li>
+            <li>6 Capítulos biográficos (~110 págs)</li>
+            <li>15 Fotos familiares restauradas 4K</li>
+            <li>Cofre de bienvenida para regalar</li>
+            <li>Envío asegurado a domicilio</li>
+          </ul>
+          <a href="#" class="btn-buy" style="background:#21262d; color:#fff;">Elegir Esencial</a>
+        </div>
+
+        <div class="price-card featured">
+          <div class="featured-badge">MÁS ELEGIDO (RECOMENDADO)</div>
+          <div style="font-weight: 600; color: var(--accent-gold);">LINAJE FAMILIAR</div>
+          <div class="price-amount">790 € <span>/ proyecto</span></div>
+          <p style="font-size: 0.85rem; color: var(--text-muted);">Diseñado para compartir entre 2 o 3 hermanos.</p>
+          <ul class="feature-list">
+            <li><strong>3 Libros idénticos</strong> (padres + 2 hijos)</li>
+            <li>8 Capítulos biográficos (~150 págs)</li>
+            <li><strong>35 Fotos</strong> tratadas en laboratorio</li>
+            <li><strong>Voz Viva</strong>: Códigos QR con el audio original</li>
+            <li>Cofre de lujo con sello de lacre</li>
+            <li>Copias extra para nietos a solo 45 €</li>
+          </ul>
+          <a href="#" class="btn-buy">Elegir Colección Linaje</a>
+        </div>
+
+        <div class="price-card">
+          <div style="font-weight: 600; color: var(--accent-gold-light);">BÓVEDA PATRIMONIAL</div>
+          <div class="price-amount">1.290 € <span>/ proyecto</span></div>
+          <p style="font-size: 0.85rem; color: var(--text-muted);">Para familias extensas con archivo fotográfico amplio.</p>
+          <ul class="feature-list">
+            <li><strong>5 Libros de Lujo</strong> encuadernados a mano</li>
+            <li>Cofre de madera maciza grabado a láser</li>
+            <li>10 Capítulos biográficos (~200 págs)</li>
+            <li>Hasta 60 fotografías restauradas</li>
+            <li>Árbol genealógico desplegable en color</li>
+            <li>Pendrive de latón con todos los audios máster</li>
+          </ul>
+          <a href="#" class="btn-buy" style="background:#21262d; color:#fff;">Elegir Bóveda</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 4: FINANZAS Y UNIT ECONOMICS -->
+    <div id="tab-finanzas" class="tab-content">
+      <div class="bento-card col-12">
+        <h2>Radiografía de Unit Economics (Colección Linaje: 790 €)</h2>
+        <p>Un modelo de negocio con cobro anticipado, sin inventario inmovilizado y con un margen bruto superior al 88%.</p>
+
+        <table class="unit-economics-table">
+          <thead>
+            <tr>
+              <th>Partida de Coste Directo (COGS)</th>
+              <th>Proveedor / Herramienta</th>
+              <th>Coste Real</th>
+              <th>% sobre PVP</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Impresión 3 Libros Tapa Dura (Munken 120g)</td>
+              <td>Imprenta POD (Podiprint / Lulu)</td>
+              <td class="highlight-cell">52,50 €</td>
+              <td>6,6%</td>
+            </tr>
+            <tr>
+              <td>Cofre de Lujo + Packaging entelado y lacre</td>
+              <td>Fabricante packaging artesanal</td>
+              <td class="highlight-cell">14,00 €</td>
+              <td>1,7%</td>
+            </tr>
+            <tr>
+              <td>APIs IA (Whisper + Gemini + CodeFormer)</td>
+              <td>Modelos locales / API comercial</td>
+              <td class="highlight-cell">2,05 €</td>
+              <td>0,3%</td>
+            </tr>
+            <tr>
+              <td>Logística y Envíos (Cofre bienvenida + Libros)</td>
+              <td>Mensajería asegurada 24h</td>
+              <td class="highlight-cell">18,00 €</td>
+              <td>2,3%</td>
+            </tr>
+            <tr style="background: rgba(212,175,55,0.06);">
+              <td style="font-weight: 700; color: #fff;">COSTE DIRECTO TOTAL (COGS)</td>
+              <td>—</td>
+              <td class="highlight-cell" style="color: #ff7b72;">86,55 €</td>
+              <td>10,9%</td>
+            </tr>
+            <tr style="background: rgba(46,160,67,0.1);">
+              <td style="font-weight: 700; color: #fff;">MARGEN BRUTO POR ENCARGO</td>
+              <td>Beneficio de contribución</td>
+              <td class="highlight-cell" style="color: #3fb950; font-size: 1.15rem;">703,45 €</td>
+              <td><span class="pill-green">89,05% MARGEN</span></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div style="margin-top: 32px; padding: 20px; background: #11151c; border-radius: 8px; border: 1px solid var(--border);">
+          <div style="font-weight: 600; color: #fff; margin-bottom: 6px;">Escalabilidad con 1 Solo Operador (10 encargos al mes):</div>
+          <p style="font-size: 0.95rem; color: #8b949e; margin: 0;">Facturación mensual: <strong>7.900 €</strong> | Costes directos fabricación: <strong>865 €</strong> | <strong>Beneficio operativo neto: ~6.800 €/mes</strong> a media jornada.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 5: VIRALIDAD Y MARKETING -->
+    <div id="tab-viral" class="tab-content">
+      <div class="bento-grid">
+        <div class="bento-card col-12">
+          <h2>Estrategia de Viralización Extremo a Extremo</h2>
+          <p>Los productos familiares no se venden con lógica de software; se venden con **lágrimas de gratitud, emoción real y urgencia de amor filial**.</p>
+        </div>
+
+        <div class="bento-card col-4">
+          <div style="font-weight: 700; color: var(--accent-gold); margin-bottom: 8px;">🎬 GUION 1: EL EFECTO LÁGRIMA</div>
+          <p style="font-size: 0.88rem; color: var(--text-muted);">El Unboxing emocional que arrasa en TikTok e Instagram Reels.</p>
+          <ul style="list-style: none; font-size: 0.88rem; color: #c9d1d9;">
+            <li style="margin-bottom: 8px;"><strong>0-3s:</strong> Abuelo de 78 años abre la caja azul marino con lazo dorado.</li>
+            <li style="margin-bottom: 8px;"><strong>4-10s:</strong> Pasa el dedo por las letras de oro de la portada y lee la dedicatoria. Se le quiebra la voz.</li>
+            <li style="margin-bottom: 8px;"><strong>11-20s:</strong> Escanea el QR del capítulo y suena su risa grabada de joven.</li>
+            <li><strong>CTA:</strong> <em>"El mejor regalo que le harás a tus padres en tu vida. Link en bio."</em></li>
+          </ul>
+        </div>
+
+        <div class="bento-card col-4">
+          <div style="font-weight: 700; color: var(--accent-gold); margin-bottom: 8px;">🎯 GUION 2: EL DESPERTADOR FILIAL</div>
+          <p style="font-size: 0.88rem; color: var(--text-muted);">Anuncio en Meta Ads (IG/FB) para hijas de 38 a 52 años ("Laura").</p>
+          <ul style="list-style: none; font-size: 0.88rem; color: #c9d1d9;">
+            <li style="margin-bottom: 8px;"><strong>Hook:</strong> <em>"¿Sabrías decirme cómo se llamaba el primer amor de tu padre?"</em></li>
+            <li style="margin-bottom: 8px;"><strong>Dolor:</strong> Sabemos la serie de moda pero ignoramos la juventud de nuestros padres. Y el tiempo se acaba.</li>
+            <li style="margin-bottom: 8px;"><strong>Solución:</strong> Preguntas por WhatsApp semanales. Cero pantallas. Libro de lujo al final.</li>
+            <li><strong>CTA:</strong> Reserva el cofre de bienvenida en 3 cuotas de 263 €.</li>
+          </ul>
+        </div>
+
+        <div class="bento-card col-4">
+          <div style="font-weight: 700; color: var(--accent-gold); margin-bottom: 8px;">✨ GUION 3: ASMR DE MUSEO</div>
+          <p style="font-size: 0.88rem; color: var(--text-muted);">Retargeting para cerrar a los visitantes que dudan.</p>
+          <ul style="list-style: none; font-size: 0.88rem; color: #c9d1d9;">
+            <li style="margin-bottom: 8px;"><strong>Visual:</strong> Rompiendo el sello de lacre rojo y acariciando la tela de lino natural.</li>
+            <li style="margin-bottom: 8px;"><strong>Papel:</strong> Crujido del papel Munken 120g y comparativa de fotos restauradas 4K.</li>
+            <li style="margin-bottom: 8px;"><strong>Audio:</strong> Sonido nítido de la voz familiar en el QR.</li>
+            <li><strong>CTA:</strong> Envío asegurado con 3 libros para hermanos.</li>
+          </ul>
+        </div>
+
+        <div class="bento-card col-12" style="background: #11151c;">
+          <h3 style="font-size: 1.3rem; color: #fff; margin-bottom: 12px;">El Embudo de Conversión en Producción (Homelab)</h3>
+          <p style="font-size: 0.92rem; color: #8b949e;">Orquestación automática entre <strong>Postiz (:4200)</strong> (publicación multicanal en TikTok, Reels y Shorts), <strong>Landing Mobile-First</strong> con checkout en <strong>Stripe + Klarna (3 cuotas)</strong>, y <strong>n8n (:5678)</strong> para disparar el mensaje de bienvenida y el envío del Cofre.</p>
+          <div style="display: flex; gap: 16px; margin-top: 16px; flex-wrap: wrap;">
+            <div style="background: rgba(212,175,55,0.08); border: 1px solid rgba(212,175,55,0.3); padding: 12px 18px; border-radius: 8px; font-size: 0.88rem;">
+              <span style="color: var(--accent-gold); font-weight: 700;">CAC Estimado:</span> 60 € - 110 €
+            </div>
+            <div style="background: rgba(46,160,67,0.08); border: 1px solid rgba(46,160,67,0.3); padding: 12px 18px; border-radius: 8px; font-size: 0.88rem;">
+              <span style="color: #3fb950; font-weight: 700;">ROAS Objetivo:</span> 7x a 10x
+            </div>
+            <div style="background: rgba(255,255,255,0.04); border: 1px solid var(--border); padding: 12px 18px; border-radius: 8px; font-size: 0.88rem;">
+              <span style="color: #fff; font-weight: 700;">Beneficio Limpio tras Ads:</span> >600 € / cliente
+            </div>
+          </div>
+        </div>
+
+        <div class="bento-card col-12" style="background: #0f131a; border-color: rgba(212, 175, 55, 0.4);">
+          <div style="text-align: center; margin-bottom: 24px;">
+            <div class="brand-pill" style="margin-bottom: 8px;">VÍDEOS GENERADOS EN PRODUCCIÓN</div>
+            <h2>Ejemplos Reales Compilados (Formato TikTok / Reels 9:16)</h2>
+            <p style="color: var(--text-muted); max-width: 650px; margin: 0 auto;">Puedes reproducirlos y escucharlos directamente con su locución en español neural y música melancólica:</p>
+          </div>
+
+          <div style="display: flex; gap: 32px; flex-wrap: wrap; justify-content: center; align-items: flex-start;">
+            <div style="background: #161b22; border: 1px solid var(--border); border-radius: 14px; padding: 20px; text-align: center; width: 340px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+              <div style="font-weight: 700; color: var(--accent-gold); margin-bottom: 6px; font-size: 1.05rem;">🎬 Ejemplo 2: Nostalgia / Despertador Filial</div>
+              <div style="font-size: 0.8rem; color: #8b949e; margin-bottom: 12px;">34.5s · Voz Álvaro Neural · 1080x1920</div>
+              <video controls style="width: 100%; border-radius: 8px; max-height: 480px; background: #000; box-shadow: 0 4px 15px rgba(0,0,0,0.8);" src="../dist/ejemplo_2_nostalgia.mp4"></video>
+              <div style="font-size: 0.82rem; color: #c9d1d9; margin-top: 12px; font-style: italic;">"¿Sabrías decirme cómo se llamaba el primer amor de tu padre...?"</div>
+            </div>
+
+            <div style="background: #161b22; border: 1px solid var(--border); border-radius: 14px; padding: 20px; text-align: center; width: 340px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+              <div style="font-weight: 700; color: var(--accent-gold); margin-bottom: 6px; font-size: 1.05rem;">✨ Ejemplo 3: Demostración de Museo</div>
+              <div style="font-size: 0.8rem; color: #8b949e; margin-bottom: 12px;">32.0s · Voz Elvira Neural · Antes vs Después 4K</div>
+              <video controls style="width: 100%; border-radius: 8px; max-height: 480px; background: #000; box-shadow: 0 4px 15px rgba(0,0,0,0.8);" src="../dist/ejemplo_3_demostracion_museo.mp4"></video>
+              <div style="font-size: 0.82rem; color: #c9d1d9; margin-top: 12px; font-style: italic;">"Tus fotos familiares no merecen pudrirse en una caja de zapatos..."</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    function switchTab(tabId) {
+      document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
+      document.getElementById(tabId).classList.add('active');
+      event.target.classList.add('active');
+    }
+  </script>
+
+</body>
+</html>

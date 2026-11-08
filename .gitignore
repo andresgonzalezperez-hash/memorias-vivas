@@ -1,0 +1,20 @@
+# Entornos virtuales y dependencias
+.venv/
+__pycache__/
+*.pyc
+
+# Salidas de compilación
+dist/
+*.pdf
+
+# Archivos de audio y fotos crudas de clientes (privacidad)
+raw_audio/
+raw_photos/
+*.mp3
+*.m4a
+*.wav
+*.ogg
+
+# Variables de entorno y secretos
+.env
+.env.local
