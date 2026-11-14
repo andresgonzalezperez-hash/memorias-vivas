@@ -1,0 +1,268 @@
+{
+  "name": "Memorias Vivas - Biógrafo Autónomo 6 Semanas",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "memorias-vivas-onboarding",
+        "responseMode": "lastNode",
+        "options": {}
+      },
+      "id": "node-stripe-webhook",
+      "name": "1. Webhook Stripe + Onboarding Familiar",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [160, 260]
+    },
+    {
+      "parameters": {
+        "command": "uv run python C:\\Proyectos\\memorias-vivas\\operaciones\\motor_biografo.py --demo"
+      },
+      "id": "node-plan-builder",
+      "name": "2. Generar Calendario 6 Semanas (motor_biografo.py)",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [400, 260]
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "weeks",
+              "weeksInterval": 1
+            }
+          ]
+        }
+      },
+      "id": "node-weekly-cron",
+      "name": "3. Disparador Semanal (Semanas 1 a 6)",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [160, 480]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://graph.facebook.com/v20.0/{{$env.WHATSAPP_PHONE_NUMBER_ID}}/messages",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer {{$env.WHATSAPP_ACCESS_TOKEN}}"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify({ messaging_product: 'whatsapp', to: $json.telefono_mayor, type: 'text', text: { body: $json.mensaje_semanal } }) }}"
+      },
+      "id": "node-whatsapp-send",
+      "name": "4. Enviar Pregunta Cálida por WhatsApp",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [400, 480]
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "memorias-vivas-audio-in",
+        "responseMode": "onReceived",
+        "options": {}
+      },
+      "id": "node-whatsapp-in",
+      "name": "5. Webhook Recepción Nota de Voz WhatsApp",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [160, 700]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "x-goog-api-key",
+              "value": "={{$env.GEMINI_API_KEY}}"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify({ contents: [{ parts: [{ text: 'Transcribe fielmente la nota de voz del entrevistado conservando sus giros familiares, calcula su duración aproximada en palabras y devuelve JSON {transcripcion, palabras, emocion_principal}.' }] }] }) }}"
+      },
+      "id": "node-transcribe-gemini",
+      "name": "6. Transcripción y Análisis de Longitud",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [400, 700]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "number": [
+            {
+              "value1": "={{ $json.palabras }}",
+              "operation": "smaller",
+              "value2": 65
+            }
+          ]
+        }
+      },
+      "id": "node-check-length",
+      "name": "7. ¿Audio Breve (< 65 palabras)?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [640, 700]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://graph.facebook.com/v20.0/{{$env.WHATSAPP_PHONE_NUMBER_ID}}/messages",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer {{$env.WHATSAPP_ACCESS_TOKEN}}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify({ messaging_product: 'whatsapp', to: $json.telefono_mayor, type: 'text', text: { body: 'Qué recuerdo tan bonito. Si cierras los ojos un segundo, ¿qué olor o qué detalle recuerdas de ese instante?' } }) }}"
+      },
+      "id": "node-empatic-followup",
+      "name": "8A. Repregunta Empática Sensorial",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [880, 580]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "x-goog-api-key",
+              "value": "={{$env.GEMINI_API_KEY}}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify({ contents: [{ parts: [{ text: 'Redacta el capítulo literario en primera persona respetando el vocabulario real de la transcripción, sin inventar fechas ni exagerar hechos: ' + $json.transcripcion }] }] }) }}"
+      },
+      "id": "node-literary-draft",
+      "name": "8B. Redacción Literaria Biográfica",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [880, 780]
+    },
+    {
+      "parameters": {
+        "command": "uv run --with typst python C:\\Proyectos\\memorias-vivas\\plantillas\\compilar_muestra.py"
+      },
+      "id": "node-compile-typst",
+      "name": "9. Compilar Libro A5 en Typst (PDF/X)",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [1120, 780]
+    }
+  ],
+  "connections": {
+    "1. Webhook Stripe + Onboarding Familiar": {
+      "main": [
+        [
+          {
+            "node": "2. Generar Calendario 6 Semanas (motor_biografo.py)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "3. Disparador Semanal (Semanas 1 a 6)": {
+      "main": [
+        [
+          {
+            "node": "4. Enviar Pregunta Cálida por WhatsApp",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "5. Webhook Recepción Nota de Voz WhatsApp": {
+      "main": [
+        [
+          {
+            "node": "6. Transcripción y Análisis de Longitud",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "6. Transcripción y Análisis de Longitud": {
+      "main": [
+        [
+          {
+            "node": "7. ¿Audio Breve (< 65 palabras)?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "7. ¿Audio Breve (< 65 palabras)?": {
+      "main": [
+        [
+          {
+            "node": "8A. Repregunta Empática Sensorial",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "8B. Redacción Literaria Biográfica",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "8B. Redacción Literaria Biográfica": {
+      "main": [
+        [
+          {
+            "node": "9. Compilar Libro A5 en Typst (PDF/X)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "meta": {
+    "n8nInstanceUrl": "http://127.0.0.1:5678",
+    "zeroDataRetention": true
+  }
+}

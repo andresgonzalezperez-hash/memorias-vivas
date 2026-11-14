@@ -798,8 +798,11 @@
 
     <!-- SIDEBAR FOOTER ACTIONS -->
     <div class="sidebar-footer">
-      <a href="dist/muestra_libro.pdf" target="_blank" class="btn-side gold">
-        📄 Muestra de Libro PDF ↗
+      <a href="web/index.html" target="_blank" class="btn-side gold">
+        ✨ Landing & Onboarding ↗
+      </a>
+      <a href="dist/muestra_libro.pdf" target="_blank" class="btn-side outline">
+        📄 Libro Completo PDF (6 Cap.) ↗
       </a>
       <a href="docs/architecture.html" target="_blank" class="btn-side outline">
         📐 Diagrama Archify ↗
@@ -3320,15 +3323,15 @@
 
           <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-bottom: 24px;">
             <div style="background: var(--surface-2); border: 1px solid var(--border); border-radius: 10px; padding: 18px;">
-              <div style="font-size: 0.72rem; color: var(--gold); font-weight: 700; margin-bottom: 6px;">1. INGESTA INVISIBLE</div>
-              <div style="font-weight: 700; color: #fff; margin-bottom: 8px;">WhatsApp / n8n (:5678)</div>
-              <p style="font-size: 0.83rem; color: var(--text-muted);">Audios crudos recibidos automáticamente mediante webhook en n8n. Notificación de confirmación afectiva al abuelo.</p>
+              <div style="font-size: 0.72rem; color: var(--gold); font-weight: 700; margin-bottom: 6px;">1. MOTOR &amp; INGESTA</div>
+              <div style="font-weight: 700; color: #fff; margin-bottom: 8px;">motor_biografo.py + n8n (:5678)</div>
+              <p style="font-size: 0.83rem; color: var(--text-muted);">Motor Python parseando las 126 preguntas + workflow importable <code>n8n_whatsapp_biografo.json</code> con detección de audio breve y repregunta empática.</p>
             </div>
 
             <div style="background: var(--surface-2); border: 1px solid var(--border); border-radius: 10px; padding: 18px;">
               <div style="font-size: 0.72rem; color: var(--gold); font-weight: 700; margin-bottom: 6px;">2. TRANSCRIPCIÓN & ESTILO</div>
               <div style="font-weight: 700; color: #fff; margin-bottom: 8px;">Whisper + Gemini Pro</div>
-              <p style="font-size: 0.83rem; color: var(--text-muted);">Whisper fonético dialectal + Gemini Pro estructurando en 8 capítulos literarios en 1ª persona, preservando modismos originales.</p>
+              <p style="font-size: 0.83rem; color: var(--text-muted);">Whisper fonético dialectal + Gemini Pro estructurando en 6 capítulos literarios en 1ª persona, preservando modismos originales.</p>
             </div>
 
             <div style="background: var(--surface-2); border: 1px solid var(--border); border-radius: 10px; padding: 18px;">
@@ -3340,17 +3343,17 @@
             <div style="background: var(--surface-2); border: 1px solid var(--border); border-radius: 10px; padding: 18px;">
               <div style="font-size: 0.72rem; color: var(--gold); font-weight: 700; margin-bottom: 6px;">4. MOTOR EDITORIAL</div>
               <div style="font-weight: 700; color: #fff; margin-bottom: 8px;">Typst Prepress Compiler</div>
-              <p style="font-size: 0.83rem; color: var(--text-muted);">Generación de PDF/X de imprenta de 132 KB con portada interior, índice, fotos tratadas y micro-QRs de voz viva en 1 segundo.</p>
+              <p style="font-size: 0.83rem; color: var(--text-muted);">Generación automática de PDF/X de 187.6 KB con los 6 capítulos completos, dedicatoria, índice, colofón y 6 códigos QR de voz viva.</p>
             </div>
           </div>
 
           <div style="background: var(--surface-2); border: 1px solid var(--border-accent); border-radius: 12px; padding: 22px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
             <div>
               <div style="font-weight: 700; font-size: 1.05rem; color: #fff;">Comprobación Real en Servidor Local:</div>
-              <div style="font-size: 0.88rem; color: var(--text-muted); margin-top: 4px;">PDF generado en <code>dist/muestra_libro.pdf</code> listo para enviar a imprenta bajo demanda.</div>
+              <div style="font-size: 0.88rem; color: var(--text-muted); margin-top: 4px;">Libro completo de 6 capítulos compilado en <code>dist/muestra_libro.pdf</code> y demo del motor exportada en <code>dist/plan_entrevista_demo.json</code>.</div>
             </div>
             <a href="dist/muestra_libro.pdf" target="_blank" class="btn-side gold" style="padding: 10px 24px; font-size: 0.9rem;">
-              📄 Descargar Muestra PDF Compilada ↗
+              📄 Descargar Libro Completo (6 Cap.) ↗
             </a>
           </div>
         </div>

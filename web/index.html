@@ -1,0 +1,1133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memorias Vivas Studio | Biografías Familiares Encuadernadas</title>
+  <meta name="description" content="Convierte seis semanas de conversaciones por WhatsApp con tus padres en un libro biográfico encuadernado con su voz viva en códigos QR.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+/* Hallmark · v2.0.0 · genre: editorial · theme: custom · shape: showcase-editorial · job: buy · hero: stage · nav: mast · footer: column-less */
+/* Hallmark · pre-emit critique: P5 H5 E5 S5 R4 V5 · weakest: R, tightened hero sentence to twelve words; bone paper and brass accents avoid nested boxes. */
+
+    :root {
+      --bg-paper: #f6f2ea;
+      --surface-cream: #efe9dc;
+      --surface-card: #fbf8f2;
+      --ink-primary: #181614;
+      --ink-muted: #5c5449;
+      --accent: #8a6d2f;
+      --accent-dark: #6e5623;
+      --accent-ink: #fbf8f2;
+      --border-hairline: #d8cebd;
+      --border-strong: #b9aa90;
+      --success-ink: #24573e;
+      --font-display: 'Cormorant Garamond', Georgia, serif;
+      --font-body: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      --space-1: 0.25rem;
+      --space-2: 0.5rem;
+      --space-3: 0.75rem;
+      --space-4: 1rem;
+      --space-6: 1.5rem;
+      --space-8: 2rem;
+      --space-12: 3rem;
+      --space-16: 4rem;
+      --space-24: 6rem;
+      --container-max: 1360px;
+      --control-height: 46px;
+      --radius-sm: 4px;
+      --radius-md: 8px;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    ::selection {
+      background-color: var(--accent);
+      color: var(--accent-ink);
+    }
+
+    html {
+      overflow-x: clip;
+      scroll-behavior: smooth;
+      scrollbar-color: var(--border-strong) var(--bg-paper);
+    }
+
+    body {
+      margin: 0;
+      overflow-x: clip;
+      background-color: var(--bg-paper);
+      color: var(--ink-primary);
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.6;
+      caret-color: var(--accent);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: var(--font-display);
+      color: var(--ink-primary);
+      font-weight: 600;
+      margin-top: 0;
+      overflow-wrap: break-word;
+      min-width: 0;
+      text-wrap: balance;
+    }
+
+    p {
+      margin-top: 0;
+      max-width: 65ch;
+      text-wrap: pretty;
+    }
+
+    a, button, input, select, textarea {
+      font-family: var(--font-body);
+    }
+
+    a:focus-visible,
+    button:focus-visible,
+    input:focus-visible,
+    select:focus-visible,
+    textarea:focus-visible,
+    summary:focus-visible {
+      outline: 3px solid var(--accent);
+      outline-offset: 2px;
+      transition: none;
+    }
+
+    .container {
+      width: 100%;
+      max-width: var(--container-max);
+      margin-inline: auto;
+      padding-inline: var(--space-8);
+    }
+
+    /* NAVEGACION SUPERIOR */
+    .site-header {
+      border-bottom: 1px solid var(--border-hairline);
+      background-color: var(--bg-paper);
+      padding-block: var(--space-4);
+    }
+
+    .nav-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-6);
+    }
+
+    .brand-mark {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--ink-primary);
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: var(--space-6);
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      color: var(--ink-muted);
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 500;
+      white-space: nowrap;
+      transition: color 0.15s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--ink-primary);
+    }
+
+    /* BOTONES */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: var(--control-height);
+      padding-inline: var(--space-6);
+      border-radius: var(--radius-sm);
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      white-space: nowrap;
+      border: 1px solid var(--ink-primary);
+      transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
+    }
+
+    .btn-primary {
+      background-color: var(--ink-primary);
+      color: var(--accent-ink);
+      border-color: var(--ink-primary);
+    }
+
+    .btn-primary:hover {
+      background-color: var(--accent-dark);
+      border-color: var(--accent-dark);
+    }
+
+    .btn-primary:active {
+      transform: translateY(1px);
+    }
+
+    .btn-primary:disabled {
+      opacity: 0.45;
+      cursor: not-allowed;
+    }
+
+    .btn-secondary {
+      background-color: transparent;
+      color: var(--ink-primary);
+      border-color: var(--border-strong);
+    }
+
+    .btn-secondary:hover {
+      background-color: var(--surface-cream);
+      border-color: var(--ink-primary);
+    }
+
+    .btn-secondary:active {
+      transform: translateY(1px);
+    }
+
+    .btn-secondary:disabled {
+      opacity: 0.45;
+      cursor: not-allowed;
+    }
+
+    /* HERO EDITORIAL */
+    .hero-section {
+      padding-block: var(--space-16);
+      border-bottom: 1px solid var(--border-hairline);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+      gap: var(--space-12);
+      align-items: center;
+    }
+
+    .hero-headline {
+      font-size: clamp(2.85rem, 4.8vw, 4.5rem);
+      line-height: 1.03;
+      margin-bottom: var(--space-4);
+    }
+
+    .hero-lede {
+      font-size: 1.125rem;
+      color: var(--ink-muted);
+      margin-bottom: var(--space-8);
+      max-width: 52ch;
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      gap: var(--space-4);
+      flex-wrap: wrap;
+    }
+
+    .hero-specimen {
+      background-color: var(--surface-cream);
+      border: 1px solid var(--border-strong);
+      border-radius: var(--radius-md);
+      padding: var(--space-8);
+    }
+
+    .specimen-title {
+      font-size: 1.85rem;
+      line-height: 1.15;
+      margin-bottom: var(--space-3);
+    }
+
+    .specimen-meta {
+      font-size: 0.95rem;
+      color: var(--ink-muted);
+      margin-bottom: var(--space-6);
+    }
+
+    .specimen-specs {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      border-top: 1px solid var(--border-hairline);
+      margin-bottom: var(--space-6);
+    }
+
+    .specimen-specs li {
+      display: flex;
+      justify-content: space-between;
+      padding-block: var(--space-2);
+      border-bottom: 1px solid var(--border-hairline);
+      font-size: 0.9rem;
+    }
+
+    /* SECCION VIAJE DE 6 SEMANAS Y MUESTRAS */
+    .journey-section {
+      padding-block: var(--space-24);
+      border-bottom: 1px solid var(--border-hairline);
+    }
+
+    .section-title {
+      font-size: clamp(2.25rem, 3.2vw, 3rem);
+      line-height: 1.12;
+      margin-bottom: var(--space-3);
+    }
+
+    .section-intro {
+      color: var(--ink-muted);
+      font-size: 1.05rem;
+      margin-bottom: var(--space-12);
+    }
+
+    .journey-split {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: var(--space-12);
+      align-items: start;
+    }
+
+    .step-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      border-top: 1px solid var(--border-strong);
+    }
+
+    .step-item {
+      padding-block: var(--space-4);
+      border-bottom: 1px solid var(--border-hairline);
+    }
+
+    .step-item h3 {
+      font-size: 1.35rem;
+      margin-bottom: var(--space-1);
+    }
+
+    .step-item p {
+      color: var(--ink-muted);
+      font-size: 0.95rem;
+      margin-bottom: 0;
+    }
+
+    .videos-pair {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: var(--space-6);
+    }
+
+    .video-figure {
+      margin: 0;
+    }
+
+    .video-figure video {
+      width: 100%;
+      aspect-ratio: 9 / 16;
+      background-color: var(--ink-primary);
+      border: 1px solid var(--border-strong);
+      border-radius: var(--radius-md);
+      display: block;
+    }
+
+    .video-figure figcaption {
+      margin-top: var(--space-3);
+      font-size: 0.9rem;
+      color: var(--ink-muted);
+    }
+
+    /* CONFIGURADOR INTERACTIVO DE 126 PREGUNTAS */
+    .configurator-section {
+      padding-block: var(--space-24);
+      background-color: var(--surface-cream);
+      border-bottom: 1px solid var(--border-hairline);
+    }
+
+    .onboarding-form {
+      background-color: var(--surface-card);
+      border: 1px solid var(--border-strong);
+      border-radius: var(--radius-md);
+      padding: var(--space-8);
+    }
+
+    .form-fields-row {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+      gap: var(--space-6);
+      margin-bottom: var(--space-6);
+    }
+
+    .field-group {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-2);
+    }
+
+    .field-group label {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--ink-primary);
+    }
+
+    .field-input {
+      min-height: var(--control-height);
+      padding-inline: var(--space-3);
+      border: 1px solid var(--border-strong);
+      border-radius: var(--radius-sm);
+      background-color: var(--bg-paper);
+      color: var(--ink-primary);
+      font-size: 0.95rem;
+    }
+
+    .field-input:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    .profile-toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-4);
+      padding-block: var(--space-4);
+      border-top: 1px solid var(--border-hairline);
+      border-bottom: 1px solid var(--border-hairline);
+      margin-bottom: var(--space-6);
+    }
+
+    .chip-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-2);
+    }
+
+    .filter-btn {
+      min-height: var(--control-height);
+      padding-inline: var(--space-4);
+      border: 1px solid var(--border-strong);
+      border-radius: var(--radius-sm);
+      background-color: var(--bg-paper);
+      color: var(--ink-primary);
+      font-size: 0.875rem;
+      font-weight: 500;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+    }
+
+    .filter-btn:hover {
+      background-color: var(--surface-cream);
+      border-color: var(--ink-primary);
+    }
+
+    .filter-btn.is-active {
+      background-color: var(--accent);
+      border-color: var(--accent);
+      color: var(--accent-ink);
+    }
+
+    .week-tabs {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: var(--space-2);
+      margin-bottom: var(--space-6);
+    }
+
+    .week-tab {
+      min-height: var(--control-height);
+      padding: var(--space-2) var(--space-3);
+      border: 1px solid var(--border-hairline);
+      border-radius: var(--radius-sm);
+      background-color: var(--bg-paper);
+      color: var(--ink-muted);
+      font-size: 0.875rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-align: center;
+      transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+    }
+
+    .week-tab:hover {
+      border-color: var(--ink-primary);
+      color: var(--ink-primary);
+    }
+
+    .week-tab.is-active {
+      background-color: var(--ink-primary);
+      border-color: var(--ink-primary);
+      color: var(--accent-ink);
+    }
+
+    .question-list {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: var(--space-4);
+      margin-bottom: var(--space-6);
+    }
+
+    .question-row {
+      display: flex;
+      align-items: flex-start;
+      gap: var(--space-3);
+      padding: var(--space-4);
+      border: 1px solid var(--border-hairline);
+      border-radius: var(--radius-sm);
+      background-color: var(--bg-paper);
+      cursor: pointer;
+      transition: border-color 0.15s ease;
+    }
+
+    .question-row:hover {
+      border-color: var(--accent);
+    }
+
+    .question-row input[type="checkbox"] {
+      width: 18px;
+      height: 18px;
+      margin-top: var(--space-1);
+      accent-color: var(--accent);
+      cursor: pointer;
+      flex-shrink: 0;
+    }
+
+    .question-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: var(--space-2);
+      margin-bottom: var(--space-1);
+      font-size: 0.85rem;
+      color: var(--accent-dark);
+      font-weight: 600;
+    }
+
+    .question-copy {
+      font-size: 0.92rem;
+      color: var(--ink-primary);
+      line-height: 1.45;
+    }
+
+    .form-footer-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-4);
+      padding-top: var(--space-6);
+      border-top: 1px solid var(--border-hairline);
+    }
+
+    .status-note {
+      font-size: 0.9rem;
+      color: var(--success-ink);
+      font-weight: 600;
+      min-height: 1lh;
+    }
+
+    /* TABLA DE EDICIONES ENCUADERNADAS */
+    .editions-section {
+      padding-block: var(--space-24);
+      border-bottom: 1px solid var(--border-hairline);
+    }
+
+    .pricing-table-wrap {
+      overflow-x: auto;
+      border-top: 2px solid var(--ink-primary);
+    }
+
+    .pricing-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+    }
+
+    .pricing-table th,
+    .pricing-table td {
+      padding: var(--space-4);
+      border-bottom: 1px solid var(--border-hairline);
+      font-size: 0.95rem;
+      vertical-align: top;
+    }
+
+    .pricing-table thead th {
+      font-family: var(--font-display);
+      font-size: 1.45rem;
+      font-weight: 700;
+      color: var(--ink-primary);
+      border-bottom: 1px solid var(--border-strong);
+    }
+
+    .price-figure {
+      display: block;
+      font-family: var(--font-body);
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--accent-dark);
+      font-variant-numeric: tabular-nums;
+      margin-top: var(--space-1);
+    }
+
+    .recommended-col {
+      background-color: var(--surface-cream);
+    }
+
+    /* FOOTER SOBRIO */
+    .site-footer {
+      padding-block: var(--space-12);
+      background-color: var(--bg-paper);
+    }
+
+    .footer-inner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-4);
+    }
+
+    .footer-note {
+      font-size: 0.9rem;
+      color: var(--ink-muted);
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 960px) {
+      .hero-grid,
+      .journey-split,
+      .form-fields-row,
+      .question-list,
+      .videos-pair {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .week-tabs {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *, *::before, *::after {
+        transition-duration: 0.001ms !important;
+        animation-duration: 0.001ms !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container nav-bar">
+      <a href="#inicio" class="brand-mark">Memorias Vivas</a>
+      <nav class="nav-links" aria-label="Navegación principal">
+        <a href="#viaje">El método</a>
+        <a href="#configurador">Preguntas del libro</a>
+        <a href="#ediciones">Ediciones y precios</a>
+        <a href="#configurador" class="btn btn-primary">Configurar encargo</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero-section">
+      <div class="container hero-grid">
+        <div>
+          <h1 class="hero-headline">El libro con la voz viva</h1>
+          <p class="hero-lede">
+            Seis semanas de charlas por WhatsApp convertidas en libro con voz viva.
+          </p>
+          <div class="hero-actions">
+            <a href="#configurador" class="btn btn-primary">Personalizar preguntas</a>
+            <a href="../dist/muestra_libro.pdf" target="_blank" class="btn btn-secondary">Leer libro de muestra</a>
+          </div>
+        </div>
+
+        <aside class="hero-specimen" aria-label="Muestra física del volumen">
+          <h2 class="specimen-title">Los Pasos de Antonio</h2>
+          <p class="specimen-meta">Ejemplar completo de seis capítulos redactado a partir de notas de voz reales.</p>
+          <ul class="specimen-specs">
+            <li><span>Formato editorial</span><strong>A5 novela en tapa dura</strong></li>
+            <li><span>Papel interior</span><strong>Munken ahuesado 120 gramos</strong></li>
+            <li><span>Grabaciones vivas</span><strong>6 códigos QR permanentes</strong></li>
+            <li><span>Canal del protagonista</span><strong>WhatsApp o llamada directa</strong></li>
+          </ul>
+          <a href="../dist/muestra_libro.pdf" target="_blank" class="btn btn-secondary">Abrir muestra PDF</a>
+        </aside>
+      </div>
+    </section>
+
+    <section id="viaje" class="journey-section">
+      <div class="container">
+        <h2 class="section-title">Seis semanas sin aplicaciones</h2>
+        <p class="section-intro">
+          Terapia de Reminiscencia clínica sin interrogatorios de fechas ni pantallas complejas.
+        </p>
+
+        <div class="journey-split">
+          <ol class="step-list">
+            <li class="step-item">
+              <h3>1. Infancia y hogar</h3>
+              <p>Olores de cocina, abuelos y juegos de calle sin reloj.</p>
+            </li>
+            <li class="step-item">
+              <h3>2. Juventud y amor</h3>
+              <p>El primer jornal, la música del domingo y el cortejo.</p>
+            </li>
+            <li class="step-item">
+              <h3>3. Esfuerzo y crianza</h3>
+              <p>Las cuatro paredes propias, los hijos y veranos en ruta.</p>
+            </li>
+            <li class="step-item">
+              <h3>4. Amigos y mesa</h3>
+              <p>Recetas de casa, sobremesas, aficiones y tormentas superadas.</p>
+            </li>
+            <li class="step-item">
+              <h3>5. Nietos y reflejo</h3>
+              <p>Complicidad entre generaciones, gestos heredados y orgullo familiar.</p>
+            </li>
+            <li class="step-item">
+              <h3>6. Carta al futuro</h3>
+              <p>Grabación íntegra en voz viva y consejos para bisnietos.</p>
+            </li>
+          </ol>
+
+          <div class="videos-pair">
+            <figure class="video-figure">
+              <video controls preload="metadata" poster="poster_2.jpg" src="../dist/ejemplo_2_nostalgia.mp4"></video>
+              <figcaption>Pieza narrativa con locución en castellano y álbum restaurado.</figcaption>
+            </figure>
+            <figure class="video-figure">
+              <video controls preload="metadata" poster="poster_3.jpg" src="../dist/ejemplo_3_demostracion_museo.mp4"></video>
+              <figcaption>Restauración fotográfica y lectura sonora mediante código QR.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="configurador" class="configurator-section">
+      <div class="container">
+        <h2 class="section-title">Configurador de 126 preguntas</h2>
+        <p class="section-intro">
+          Selecciona el perfil biográfico familiar y descarga el expediente para iniciar la primera charla.
+        </p>
+
+        <form class="onboarding-form" id="onboarding-form" data-endpoint="" onsubmit="return false;">
+          <div class="form-fields-row">
+            <div class="field-group">
+              <label for="input-protagonista">Nombre del protagonista</label>
+              <input class="field-input" id="input-protagonista" type="text" value="Antonio González Morera" placeholder="Nombre y apellidos">
+            </div>
+            <div class="field-group">
+              <label for="input-hijos">Hijos que encargan el libro</label>
+              <input class="field-input" id="input-hijos" type="text" value="Laura, Carlos y Miguel" placeholder="Nombres separados por comas">
+            </div>
+            <div class="field-group">
+              <label for="input-tabu">Temas sensibles a evitar</label>
+              <input class="field-input" id="input-tabu" type="text" placeholder="Ninguno indicado por defecto">
+            </div>
+          </div>
+
+          <div class="profile-toolbar">
+            <div class="chip-group" role="group" aria-label="Filtros por perfil biográfico">
+              <button type="button" class="filter-btn is-active" onclick="toggleProfile('Troncal', this)" id="btn-prof-Troncal">36 Troncales base</button>
+              <button type="button" class="filter-btn" onclick="toggleProfile('Rural', this)">Mundo rural</button>
+              <button type="button" class="filter-btn" onclick="toggleProfile('Urbano', this)">Ciudad y barrio</button>
+              <button type="button" class="filter-btn" onclick="toggleProfile('Oficio', this)">Oficios y trabajo</button>
+              <button type="button" class="filter-btn" onclick="toggleProfile('Gastronomía', this)">Gastronomía y mesa</button>
+              <button type="button" class="filter-btn" onclick="toggleProfile('Nietos', this)">Especial nietos</button>
+            </div>
+            <div class="status-note" id="live-counter" role="status">36 de 126 preguntas seleccionadas</div>
+          </div>
+
+          <div class="week-tabs" role="tablist" aria-label="Selector de semanas del viaje">
+            <button type="button" class="week-tab is-active" onclick="selectWeek(1, this)">Semana 1: Infancia</button>
+            <button type="button" class="week-tab" onclick="selectWeek(2, this)">Semana 2: Juventud</button>
+            <button type="button" class="week-tab" onclick="selectWeek(3, this)">Semana 3: Crianza</button>
+            <button type="button" class="week-tab" onclick="selectWeek(4, this)">Semana 4: Costumbres</button>
+            <button type="button" class="week-tab" onclick="selectWeek(5, this)">Semana 5: Nietos</button>
+            <button type="button" class="week-tab" onclick="selectWeek(6, this)">Semana 6: Legado</button>
+          </div>
+
+          <div class="question-list" id="question-grid"></div>
+
+          <noscript>
+            <p>Activa JavaScript para personalizar las 126 preguntas del catálogo semanal de Memorias Vivas.</p>
+          </noscript>
+
+          <div class="form-footer-actions">
+            <p class="status-note" id="form-note">Generación local en tu navegador; el enlace Stripe se activa tras confirmar tu encargo.</p>
+            <div class="hero-actions">
+              <button type="button" class="btn btn-secondary" onclick="copyBriefText()">Copiar guion</button>
+              <button type="button" class="btn btn-primary" onclick="downloadBriefJson()">Descargar JSON</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section id="ediciones" class="editions-section">
+      <div class="container">
+        <h2 class="section-title">Ediciones encuadernadas</h2>
+        <p class="section-intro">
+          Fabricación bajo demanda en taller artesanal o imprenta digital editorial, con pago único o fraccionado en tres cuotas mediante Klarna y Stripe.
+        </p>
+
+        <div class="pricing-table-wrap">
+          <table class="pricing-table">
+            <thead>
+              <tr>
+                <th>Características de la edición</th>
+                <th>Edición Esencial <span class="price-figure">490 €</span></th>
+                <th class="recommended-col">Colección Linaje <span class="price-figure">790 €</span></th>
+                <th>Bóveda Patrimonial <span class="price-figure">1.390 €</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Semanas de entrevista por WhatsApp</td>
+                <td>4 semanas guiadas</td>
+                <td class="recommended-col">6 semanas completas</td>
+                <td>6 semanas con sesión de refuerzo</td>
+              </tr>
+              <tr>
+                <td>Ejemplares impresos en papel Munken 120g</td>
+                <td>1 ejemplar en tapa dura</td>
+                <td class="recommended-col">3 ejemplares entelados en lino</td>
+                <td>5 ejemplares + estuche rígido</td>
+              </tr>
+              <tr>
+                <td>Restauración fotográfica en alta resolución</td>
+                <td>Hasta 15 fotografías</td>
+                <td class="recommended-col">Hasta 35 fotografías</td>
+                <td>Álbum ampliado hasta 60 fotos</td>
+              </tr>
+              <tr>
+                <td>Códigos QR permanentes de voz viva</td>
+                <td>3 grabaciones clave</td>
+                <td class="recommended-col">6 códigos por capítulo</td>
+                <td>12 códigos + archivo WAV maestro</td>
+              </tr>
+              <tr>
+                <td>Pago en 3 plazos sin intereses (Klarna)</td>
+                <td>163,33 € al mes</td>
+                <td class="recommended-col">263,33 € al mes</td>
+                <td>463,33 € al mes</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-note">Memorias Vivas Studio: archivo biográfico familiar con custodia en frío RGPD Zero Data Retention.</p>
+      <a href="../dist/muestra_libro.pdf" target="_blank" class="btn btn-secondary">Descargar muestra PDF</a>
+    </div>
+  </footer>
+
+  <script>
+    const CATALOGO_126 = {
+      1: [
+        { id: "S1-T1", tag: "Troncal", def: true, text: "Si pudieras abrir hoy la puerta de la casa donde te criaste, ¿qué es lo primero que verías al entrar?" },
+        { id: "S1-T2", tag: "Gastronomía", def: true, text: "¿Qué olor salía de la cocina al volver a casa que te hacía saber desde la puerta qué había de comer?" },
+        { id: "S1-T3", tag: "Troncal", def: true, text: "Háblame de tu padre y de tu madre cuando eras pequeño: ¿cómo eran su carácter y sus manos?" },
+        { id: "S1-T4", tag: "Troncal", def: true, text: "¿A qué jugabais en la calle cuando no había pantallas hasta que os llamaban para cenar?" },
+        { id: "S1-T5", tag: "Troncal", def: true, text: "¿Cómo era el camino hacia tu escuela y aquel maestro que más respeto te inspiraba?" },
+        { id: "S1-T6", tag: "Troncal", def: true, text: "Cuéntame alguna travesura de infancia tuya o con tus hermanos de la que hoy te rías." },
+        { id: "S1-O1", tag: "Rural", def: false, text: "¿Cómo eran los días de cosecha, vendimia o matanza cuando ayudaba toda la familia en el pueblo?" },
+        { id: "S1-O2", tag: "Rural", def: false, text: "¿Había animales en casa o en el corral y tenías alguno favorito al que cuidaras tú?" },
+        { id: "S1-O3", tag: "Rural", def: false, text: "¿Dónde ibais a refrescaros en agosto: al río, a la acequia o a la fuente del pueblo?" },
+        { id: "S1-O4", tag: "Urbano", def: false, text: "¿Cómo era hacer los recados en la tienda de ultramarinos, la lechería o el horno de tu calle?" },
+        { id: "S1-O5", tag: "Urbano", def: false, text: "¿Se sacaban las sillas a la puerta del patio o la acera en verano para tomar el fresco?" },
+        { id: "S1-O6", tag: "Urbano", def: false, text: "¿Cómo era ir al cine de barrio los domingos y qué películas te hacían soñar?" },
+        { id: "S1-O7", tag: "Troncal", def: false, text: "¿Qué historias antiguas contaban tus abuelos junto al fuego después de cenar?" },
+        { id: "S1-O8", tag: "Troncal", def: false, text: "¿De dónde venía el apellido o el apodo familiar en tu tierra?" },
+        { id: "S1-O9", tag: "Troncal", def: false, text: "Entre todos tus hermanos, ¿qué papel te tocó desempeñar y con cuál tenías más complicidad?" },
+        { id: "S1-O10", tag: "Troncal", def: false, text: "¿Cómo se compartía y aprovechaba la ropa o el cuarto entre hermanos?" },
+        { id: "S1-O11", tag: "Troncal", def: false, text: "¿Cómo era la noche de Reyes en tu infancia y qué regalo humilde te hizo más ilusión?" },
+        { id: "S1-O12", tag: "Troncal", def: false, text: "¿Cómo recuerdas el día de tu Comunión o las fiestas grandes estrenando zapatos?" },
+        { id: "S1-O13", tag: "Gastronomía", def: false, text: "¿Qué milagros hacía tu madre para estirar la despensa y dar de comer a todos?" },
+        { id: "S1-O14", tag: "Troncal", def: false, text: "¿Qué remedios caseros se usaban en tu casa para curar catarros o dolores?" },
+        { id: "S1-O15", tag: "Troncal", def: false, text: "¿Cuál era tu rincón secreto favorito cuando querías estar a solas pensando?" }
+      ],
+      2: [
+        { id: "S2-T1", tag: "Oficio", def: true, text: "Háblame del día en que recibiste tu primer sueldo: ¿en qué trabajabas y qué sentiste al llevarlo a casa?" },
+        { id: "S2-T2", tag: "Urbano", def: true, text: "Cuando llegaba el domingo, ¿a dónde ibais a pasear o a bailar y qué canción sonaba?" },
+        { id: "S2-T3", tag: "Troncal", def: true, text: "¿Dónde viste por primera vez a tu compañero de vida y qué te llamó la atención?" },
+        { id: "S2-T4", tag: "Troncal", def: true, text: "¿Cómo eran vuestros paseos de novios con horario límite y bajo la mirada familiar?" },
+        { id: "S2-T5", tag: "Troncal", def: true, text: "¿Cómo fue tu primer gran viaje lejos de casa por trabajo, estudio o servicio militar?" },
+        { id: "S2-T6", tag: "Troncal", def: true, text: "Háblame del día de vuestra boda o emancipación: ¿qué anécdota ocurrió ese día?" },
+        { id: "S2-O1", tag: "Troncal", def: false, text: "¿Cómo fue la primera vez que entraste oficialmente en casa de tus futuros suegros?" },
+        { id: "S2-O2", tag: "Troncal", def: false, text: "En los bailes de juventud, ¿cómo se encajaba un sí o unas calabazas al cruzar la pista?" },
+        { id: "S2-O3", tag: "Troncal", def: false, text: "¿Cuánto tiempo ahorrasteis en la cartilla para comprar los primeros muebles de casa?" },
+        { id: "S2-O4", tag: "Oficio", def: false, text: "¿Quién fue el maestro o encargado que te enseñó los secretos de tu primer oficio?" },
+        { id: "S2-O5", tag: "Oficio", def: false, text: "¿A qué hora madrugabas a los dieciocho años y qué llevabas en la fiambrera para almorzar?" },
+        { id: "S2-O6", tag: "Oficio", def: false, text: "¿Tuviste algún sueño o vocación secreta de juventud que tuviste que aparcar?" },
+        { id: "S2-O7", tag: "Troncal", def: false, text: "Si hiciste el servicio militar, ¿dónde te destinaron y qué historia del cuartel recuerdas?" },
+        { id: "S2-O8", tag: "Troncal", def: false, text: "¿Cómo era tu grupo de amistades jóvenes y dónde os reuníais a charlar sin prisa?" },
+        { id: "S2-O9", tag: "Troncal", def: false, text: "¿Cuál fue la primera prenda elegante que compraste con tu propio dinero?" },
+        { id: "S2-O10", tag: "Urbano", def: false, text: "¿Cuál fue el primer vehículo que condujiste (bicicleta, moto o coche)?" },
+        { id: "S2-O11", tag: "Urbano", def: false, text: "¿Recuerdas la tarde en que entró en casa la primera radio grande o el primer televisor?" },
+        { id: "S2-O12", tag: "Troncal", def: false, text: "De joven, ¿eras formal y prudente o tenías tu carácter rebelde cuando algo era injusto?" },
+        { id: "S2-O13", tag: "Troncal", def: false, text: "¿Qué consejo te dieron tus padres antes de marcharte de casa para hacer tu vida?" },
+        { id: "S2-O14", tag: "Troncal", def: false, text: "¿Cómo defendiste tu propia forma de vivir e independencia frente al guion habitual?" },
+        { id: "S2-O15", tag: "Troncal", def: false, text: "¿Quién fue la persona que más creyó en ti cuando empezabas con los bolsillos vacíos?" }
+      ],
+      3: [
+        { id: "S3-T1", tag: "Troncal", def: true, text: "¿Cómo era la primera casa donde vivisteis por vuestra cuenta aunque faltaran comodidades?" },
+        { id: "S3-T2", tag: "Troncal", def: true, text: "¿Dónde estabas y qué sentiste al sostener en brazos a tu primer hijo recién nacido?" },
+        { id: "S3-T3", tag: "Troncal", def: true, text: "¿Por qué elegisteis los nombres de vuestros hijos y cómo era cada uno a los cinco años?" },
+        { id: "S3-T4", tag: "Troncal", def: true, text: "En las épocas de vacas flacas, ¿cómo protegíais a los niños de las preocupaciones?" },
+        { id: "S3-T5", tag: "Troncal", def: true, text: "Háblame de aquellos veranos cargando el coche hasta el techo para ir de vacaciones en familia." },
+        { id: "S3-T6", tag: "Oficio", def: true, text: "De todos tus años de trabajo fuera o dentro de casa, ¿qué logro te honra más?" },
+        { id: "S3-O1", tag: "Troncal", def: false, text: "Cuéntame un susto o trastada infantil de tus hijos que hoy sea una comedia familiar." },
+        { id: "S3-O2", tag: "Troncal", def: false, text: "¿Quién ponía orden en casa cuando tocaba revisar las notas del colegio?" },
+        { id: "S3-O3", tag: "Gastronomía", def: false, text: "¿Cómo eran las mañanas en casa preparando los desayunos antes de ir al colegio y al taller?" },
+        { id: "S3-O4", tag: "Rural", def: false, text: "Si os mudasteis de tierra o pueblo, ¿cómo tomasteis esa decisión de cambio?" },
+        { id: "S3-O5", tag: "Rural", def: false, text: "¿Qué emoción notabas al volver de visita al pueblo y ver el campanario a lo lejos?" },
+        { id: "S3-O6", tag: "Oficio", def: false, text: "¿Cómo evolucionó tu profesión desde los trabajos manuales del inicio hasta tu jubilación?" },
+        { id: "S3-O7", tag: "Oficio", def: false, text: "¿Qué compañero, socio o cliente acabó convirtiéndose en un amigo más de la familia?" },
+        { id: "S3-O8", tag: "Oficio", def: false, text: "¿Cómo viviste tu último día laboral y la entrada en la etapa de jubilación?" },
+        { id: "S3-O9", tag: "Urbano", def: false, text: "¿Cómo cambió la vida doméstica el día que instalasteis la primera lavadora o el teléfono fijo?" },
+        { id: "S3-O10", tag: "Troncal", def: false, text: "¿Cómo ahorrabais poco a poco para pagar los estudios de los hijos o mejorar el hogar?" },
+        { id: "S3-O11", tag: "Gastronomía", def: false, text: "¿Qué regla era sagrada e innegociable en vuestra mesa a la hora de comer juntos?" },
+        { id: "S3-O12", tag: "Troncal", def: false, text: "¿Qué esfuerzo o sacrificio hiciste en silencio por tus hijos sin que ellos lo supieran?" },
+        { id: "S3-O13", tag: "Troncal", def: false, text: "Cuando tus propios padres envejecieron, ¿qué aprendiste acompañándolos en esa etapa?" },
+        { id: "S3-O14", tag: "Troncal", def: false, text: "¿Qué objeto heredado de tus padres conservas en casa como un tesoro?" },
+        { id: "S3-O15", tag: "Troncal", def: false, text: "¿Cómo fue quedarse otra vez en silencio en casa cuando los hijos volaron del nido?" }
+      ],
+      4: [
+        { id: "S4-T1", tag: "Troncal", def: true, text: "¿Quiénes han sido tus amigos de toda la vida para compartir confidencias, cartas y cafés?" },
+        { id: "S4-T2", tag: "Rural", def: true, text: "Cuando tenías una tarde libre para ti, ¿qué afición manual o pasatiempo te hacía feliz?" },
+        { id: "S4-T3", tag: "Gastronomía", def: true, text: "¿Cuál es la receta legendaria de vuestra casa y el truco para que quede perfecta?" },
+        { id: "S4-T4", tag: "Gastronomía", def: true, text: "¿Cómo era una Nochebuena o fiesta familiar con todos sentados alrededor de la mesa?" },
+        { id: "S4-T5", tag: "Urbano", def: true, text: "¿Cuál ha sido el viaje o excursión que más te gustó descubrir a lo largo de tu vida?" },
+        { id: "S4-T6", tag: "Troncal", def: true, text: "Cuando te tocó capear un golpe duro de salud o pérdida, ¿a qué te agarraste para salir adelante?" },
+        { id: "S4-O1", tag: "Gastronomía", def: false, text: "¿Cómo era el ritual del aperitivo de los domingos antes de pasar al comedor?" },
+        { id: "S4-O2", tag: "Gastronomía", def: false, text: "¿Cuál es ese bocado sencillo que para ti sigue siendo un manjar de reyes?" },
+        { id: "S4-O3", tag: "Gastronomía", def: false, text: "En las sobremesas de cartas o dominó, ¿quién tenía peor perder de la familia?" },
+        { id: "S4-O4", tag: "Rural", def: false, text: "¿Qué descanso da a la cabeza cuidar un huerto, plantar árboles o atender las macetas?" },
+        { id: "S4-O5", tag: "Oficio", def: false, text: "¿Qué piezas hechas, cosidas o reparadas por tus manos están en casas de tus hijos?" },
+        { id: "S4-O6", tag: "Urbano", def: false, text: "¿De qué equipo o deporte has disfrutado siempre y qué victoria celebraste más?" },
+        { id: "S4-O7", tag: "Troncal", def: false, text: "¿Qué cantantes o coplas componen la banda sonora que te alegra el día?" },
+        { id: "S4-O8", tag: "Troncal", def: false, text: "¿Qué refrán popular repites siempre porque acierta en casi cualquier situación?" },
+        { id: "S4-O9", tag: "Troncal", def: false, text: "¿Cómo es tu mañana perfecta cuando te levantas tranquilo y sin mirar el reloj?" },
+        { id: "S4-O10", tag: "Urbano", def: false, text: "Háblame de algún vecino bueno que os tendiera la mano desinteresadamente." },
+        { id: "S4-O11", tag: "Troncal", def: false, text: "¿Qué favor ayudaste a hacer a alguien que todavía te deja el corazón satisfecho?" },
+        { id: "S4-O12", tag: "Troncal", def: false, text: "¿Qué suceso histórico recuerdas haber visto por televisión con toda la familia en silencio?" },
+        { id: "S4-O13", tag: "Rural", def: false, text: "¿Qué costumbre de barrio o pueblo de antes te gustaría recuperar hoy?" },
+        { id: "S4-O14", tag: "Troncal", def: false, text: "¿Cuál ha sido la escena más cómica o surrealista en la que te viste metido?" },
+        { id: "S4-O15", tag: "Troncal", def: false, text: "¿Por qué ayuda el buen humor a llevar con serenidad el paso de los años?" }
+      ],
+      5: [
+        { id: "S5-T1", tag: "Nietos", def: true, text: "¿Qué sentiste la primera vez que pusieron en tus brazos a tu primer nieto?" },
+        { id: "S5-T2", tag: "Nietos", def: true, text: "¿Qué caprichos o pactos secretos tienes con tus nietos sin que se enteren sus padres?" },
+        { id: "S5-T3", tag: "Nietos", def: true, text: "Cuando miras a tus hijos y nietos hablar, ¿qué gestos o carácter vuestro ves en ellos?" },
+        { id: "S5-T4", tag: "Troncal", def: true, text: "Mirando hoy a tus hijos adultos luchar cada día, ¿qué es lo que más admiras de ellos?" },
+        { id: "S5-T5", tag: "Troncal", def: true, text: "Habiendo vivido entre cartas de papel y videollamadas, ¿qué te asombra del mundo de hoy?" },
+        { id: "S5-T6", tag: "Troncal", def: true, text: "¿Qué costumbre familiar te gustaría que mantuvieran siempre unidos tus hijos y nietos?" },
+        { id: "S5-O1", tag: "Nietos", def: false, text: "¿Con qué apelativo cariñoso te llaman tus nietos y cómo nació ese nombre?" },
+        { id: "S5-O2", tag: "Nietos", def: false, text: "Cuéntame alguna ocurrencia graciosa de un nieto que te dejara sin palabras." },
+        { id: "S5-O3", tag: "Nietos", def: false, text: "¿Qué anécdota de tu juventud te piden siempre que les vuelvas a contar?" },
+        { id: "S5-O4", tag: "Nietos", def: false, text: "¿Qué rasgo hace único a cada uno de tus nietos cuando pronuncias su nombre?" },
+        { id: "S5-O5", tag: "Troncal", def: false, text: "Si no hay nietos, háblame de los sobrinos, ahijados o jóvenes cercanos a ti." },
+        { id: "S5-O6", tag: "Troncal", def: false, text: "¿Qué disfrutas aprendiendo cuando conversas con la gente joven actual?" },
+        { id: "S5-O7", tag: "Troncal", def: false, text: "Ahora que tus hijos están pendientes de cuidarte, ¿cómo vives ese cariño de vuelta?" },
+        { id: "S5-O8", tag: "Troncal", def: false, text: "¿De qué te gusta conversar con cada hijo cuando os quedáis solos tomando un café?" },
+        { id: "S5-O9", tag: "Troncal", def: false, text: "Si pudieras quitarles una preocupación de encima a tus hijos hoy mismo, ¿cuál elegirías?" },
+        { id: "S5-O10", tag: "Troncal", def: false, text: "¿Qué parte de tu espíritu interior sigue sintiendo la misma fuerza de los treinta años?" },
+        { id: "S5-O11", tag: "Troncal", def: false, text: "¿Qué libertad trae cumplir años sin tener que demostrar ya nada a nadie?" },
+        { id: "S5-O12", tag: "Troncal", def: false, text: "¿Cuál es el pequeño placer diario de tus mañanas que te hace sentir agradecido?" },
+        { id: "S5-O13", tag: "Troncal", def: false, text: "De tus objetos cotidianos, relojes o herramientas, ¿cuál guarda mejor historia?" },
+        { id: "S5-O14", tag: "Troncal", def: false, text: "¿Cuál es tu fotografía favorita del álbum familiar y qué instante captó?" },
+        { id: "S5-O15", tag: "Troncal", def: false, text: "Cuando miras hoy a toda la familia reunida, ¿qué sientes al recordar vuestros comienzos?" }
+      ],
+      6: [
+        { id: "S6-T1", tag: "Troncal", def: true, text: "Si te sentaras con tu yo de dieciocho años en un banco, ¿qué le dirías al oído?" },
+        { id: "S6-T2", tag: "Troncal", def: true, text: "Mirando toda tu vida, ¿a quién llevas el mayor agradecimiento en el corazón?" },
+        { id: "S6-T3", tag: "Troncal", def: true, text: "¿Cuál es tu secreto para querer bien y mantener unida una familia a lo largo de décadas?" },
+        { id: "S6-T4", tag: "Troncal", def: true, text: "¿Qué has aprendido que significa el éxito verdadero y qué cosas no merecen preocupaciones?" },
+        { id: "S6-T5", tag: "Troncal", def: true, text: "Grabación QR directa para tus hijos: háblales ahora y diles lo que sientes por ellos." },
+        { id: "S6-T6", tag: "Nietos", def: true, text: "Cápsula del tiempo QR a cincuenta años: qué bendición dejas a tus bisnietos futuros." },
+        { id: "S6-O1", tag: "Troncal", def: false, text: "¿Qué comprendes hoy de tus propios padres que de joven te costaba entender?" },
+        { id: "S6-O2", tag: "Troncal", def: false, text: "¿Qué enseñanza valiosa sacaste de algún error o tropiezo del pasado?" },
+        { id: "S6-O3", tag: "Troncal", def: false, text: "¿Qué significa para ti acostarte por la noche con la conciencia tranquila?" },
+        { id: "S6-O4", tag: "Troncal", def: false, text: "Si el apellido familiar tuviera tres palabras grabadas en un escudo, ¿cuáles serían?" },
+        { id: "S6-O5", tag: "Troncal", def: false, text: "¿Cuál es el mejor consejo que te dieron nunca y quién te lo regaló?" },
+        { id: "S6-O6", tag: "Troncal", def: false, text: "Ante las rachas difíciles, ¿cómo se protege la dignidad y la esperanza?" },
+        { id: "S6-O7", tag: "Troncal", def: false, text: "Si pudieras volver a vivir un solo día perfecto de principio a fin, ¿cuál elegirías?" },
+        { id: "S6-O8", tag: "Troncal", def: false, text: "¿Cuál ha sido el sonido más hermoso que has escuchado en tu existencia?" },
+        { id: "S6-O9", tag: "Troncal", def: false, text: "¿Por qué detalle cotidiano das gracias nada más abrir los ojos?" },
+        { id: "S6-O10", tag: "Troncal", def: false, text: "¿Qué consuelo te dio tu fe, espiritualidad o filosofía vital en días grises?" },
+        { id: "S6-O11", tag: "Troncal", def: false, text: "¿Dónde notas que sigue vivo el cariño de las personas queridas que ya partieron?" },
+        { id: "S6-O12", tag: "Gastronomía", def: false, text: "Si levantáramos una copa con toda la familia hoy, ¿por qué brindarías?" },
+        { id: "S6-O13", tag: "Troncal", def: false, text: "¿Qué título te gustaría elegir personalmente para la cubierta de este libro?" },
+        { id: "S6-O14", tag: "Troncal", def: false, text: "¿Qué has sentido durante estas seis semanas repasando tu vida entera?" },
+        { id: "S6-O15", tag: "Troncal", def: false, text: "Despídete libremente con tu voz para todos los lectores del presente y del futuro." }
+      ]
+    };
+
+    const selectedIds = new Set();
+    let activeWeek = 1;
+
+    // Seleccionar las 36 troncales por defecto
+    Object.values(CATALOGO_126).forEach(list => {
+      list.forEach(item => {
+        if (item.def) selectedIds.add(item.id);
+      });
+    });
+
+    function renderWeek(weekNum) {
+      activeWeek = weekNum;
+      const grid = document.getElementById("question-grid");
+      grid.innerHTML = "";
+
+      CATALOGO_126[weekNum].forEach(item => {
+        const label = document.createElement("label");
+        label.className = "question-row";
+
+        const cb = document.createElement("input");
+        cb.type = "checkbox";
+        cb.checked = selectedIds.has(item.id);
+        cb.addEventListener("change", () => {
+          if (cb.checked) selectedIds.add(item.id);
+          else selectedIds.delete(item.id);
+          updateCounter();
+        });
+
+        const content = document.createElement("div");
+        const meta = document.createElement("div");
+        meta.className = "question-meta";
+        meta.textContent = item.id + " (" + item.tag + ")";
+
+        const copy = document.createElement("div");
+        copy.className = "question-copy";
+        copy.textContent = item.text;
+
+        content.appendChild(meta);
+        content.appendChild(copy);
+        label.appendChild(cb);
+        label.appendChild(content);
+        grid.appendChild(label);
+      });
+
+      updateCounter();
+    }
+
+    function selectWeek(weekNum, btn) {
+      document.querySelectorAll(".week-tab").forEach(tab => tab.classList.remove("is-active"));
+      if (btn) btn.classList.add("is-active");
+      renderWeek(weekNum);
+    }
+
+    function toggleProfile(tag, btn) {
+      if (tag === "Troncal") {
+        btn.classList.add("is-active");
+        Object.values(CATALOGO_126).forEach(list => {
+          list.forEach(item => {
+            if (item.def) selectedIds.add(item.id);
+            else selectedIds.delete(item.id);
+          });
+        });
+        document.querySelectorAll(".filter-btn").forEach(b => {
+          if (b.id !== "btn-prof-Troncal") b.classList.remove("is-active");
+        });
+      } else {
+        const active = btn.classList.toggle("is-active");
+        Object.values(CATALOGO_126).forEach(list => {
+          list.forEach(item => {
+            if (item.tag === tag) {
+              if (active) selectedIds.add(item.id);
+              else if (!item.def) selectedIds.delete(item.id);
+            }
+          });
+        });
+      }
+      renderWeek(activeWeek);
+    }
+
+    function updateCounter() {
+      const el = document.getElementById("live-counter");
+      if (el) {
+        el.textContent = selectedIds.size + " de 126 preguntas seleccionadas";
+      }
+    }
+
+    function buildExpediente() {
+      const protagonista = document.getElementById("input-protagonista").value.trim() || "Protagonista";
+      const hijos = document.getElementById("input-hijos").value.trim() || "Familia";
+      const tabu = document.getElementById("input-tabu").value.trim() || "Ninguno";
+      const semanas = {};
+
+      Object.keys(CATALOGO_126).forEach(wk => {
+        semanas["semana_" + wk] = CATALOGO_126[wk]
+          .filter(q => selectedIds.has(q.id))
+          .map(q => ({ id: q.id, categoria: q.tag, pregunta: q.text }));
+      });
+
+      return {
+        protagonista,
+        compradores_hijos: hijos,
+        temas_excluidos: tabu,
+        total_preguntas: selectedIds.size,
+        semanas
+      };
+    }
+
+    function copyBriefText() {
+      const exp = buildExpediente();
+      const lines = [
+        "EXPEDIENTE DE ENTREVISTA MEMORIAS VIVAS",
+        "Protagonista: " + exp.protagonista,
+        "Familia: " + exp.compradores_hijos,
+        "Temas excluidos: " + exp.temas_excluidos,
+        "Preguntas seleccionadas: " + exp.total_preguntas,
+        ""
+      ];
+      Object.keys(exp.semanas).forEach(k => {
+        lines.push(k.toUpperCase());
+        exp.semanas[k].forEach(q => lines.push("- [" + q.id + "] " + q.pregunta));
+        lines.push("");
+      });
+      navigator.clipboard.writeText(lines.join("\n"));
+      const note = document.getElementById("form-note");
+      note.textContent = "Guion copiado al portapapeles en tu equipo local; nada fue enviado a un servidor.";
+    }
+
+    function downloadBriefJson() {
+      const exp = buildExpediente();
+      const blob = new Blob([JSON.stringify(exp, null, 2)], { type: "application/json;charset=utf-8" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = "expediente_memorias_vivas.json";
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+      const note = document.getElementById("form-note");
+      note.textContent = "Expediente descargado localmente como expediente_memorias_vivas.json.";
+    }
+
+    renderWeek(1);
+  </script>
+</body>
+</html>

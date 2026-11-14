@@ -34,3 +34,11 @@
 - [x] Crear el storyboard y la guía de producción del Ejemplo 3 (Antes vs Después / ASMR) [`marketing/campañas_piloto/ejemplo_3_demostracion_museo.md`](marketing/campañas_piloto/ejemplo_3_demostracion_museo.md).
 - [x] Investigar y documentar la comparativa técnica de herramientas de UGC (Arcads, Creatify, TikTok Symphony) y restauración fotográfica (Topaz vs Magnific vs Krea vs SUPIR) [`marketing/comparativa_herramientas_ugc_y_restauracion.md`](marketing/comparativa_herramientas_ugc_y_restauracion.md).
 - [x] Crear el Master Dashboard Operativo y C-Suite unificado en HTML interactivo con reproductor de vídeo, simulador financiero en vivo y dictámenes ejecutivos [`dashboard.html`](dashboard.html).
+
+## Fase 6: Producción Completa (Libro 6 Capítulos, Motor Biógrafo y Landing Hallmark)
+- [x] Ampliar la plantilla editorial Typst a los 6 capítulos biográficos completos con bloques de QR de voz viva y colofón [`plantillas/libro_memorias.typ`](plantillas/libro_memorias.typ) y recompilar `dist/muestra_libro.pdf`.
+- [x] Ampliar el catálogo psicogerontológico a 126 preguntas calibradas (36 troncales + 90 de reserva) [`entrevistas/guion_maestro.md`](entrevistas/guion_maestro.md).
+- [x] Crear plantilla de variables de entorno [`C:\Proyectos\memorias-vivas\.env.example`](.env.example).
+- [x] Implementar el motor automatizado de entrevistas en Python [`operaciones/motor_biografo.py`](operaciones/motor_biografo.py) y verificar su ejecución `--demo`.
+- [x] Crear el flujo automatizado importable para n8n [`operaciones/n8n_whatsapp_biografo.json`](operaciones/n8n_whatsapp_biografo.json).
+- [x] Construir la Landing Page pública y configurador familiar bajo estándar `hallmark` [`web/index.html`](web/index.html) y verificar `0 FAIL / 0 REFLEX / 0 WARN` con `sloplint.mjs`.

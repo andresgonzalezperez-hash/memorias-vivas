@@ -11,7 +11,15 @@
   ```powershell
   Start-Process "dashboard.html"
   ```
-* **Compilación de libro de muestra a PDF**:
+* **Abrir la Landing Pública & Configurador Familiar**:
+  ```powershell
+  Start-Process "web\index.html"
+  ```
+* **Ejecutar demostración del Motor Biógrafo Automatizado**:
+  ```powershell
+  uv run python operaciones/motor_biografo.py --demo
+  ```
+* **Compilación de libro de muestra (6 capítulos completos) a PDF**:
   ```powershell
   uv run --with typst python plantillas/compilar_muestra.py
   ```
@@ -37,7 +45,9 @@
 * **Directorio de Proveedores y Cadena de Suministro**: [`operaciones/directorio_proveedores_reales.md`](operaciones/directorio_proveedores_reales.md)
 * **Campañas Piloto y Bancos Vintage**: [`marketing/campañas_piloto/bancos_imagenes_vintage.md`](marketing/campañas_piloto/bancos_imagenes_vintage.md), [`marketing/campañas_piloto/ejemplo_2_nostalgia_guia_y_config.md`](marketing/campañas_piloto/ejemplo_2_nostalgia_guia_y_config.md) y [`marketing/campañas_piloto/ejemplo_3_demostracion_museo.md`](marketing/campañas_piloto/ejemplo_3_demostracion_museo.md)
 * **Comparativa de Vanguardia (UGC & Restauración)**: [`marketing/comparativa_herramientas_ugc_y_restauracion.md`](marketing/comparativa_herramientas_ugc_y_restauracion.md)
-* **Plantilla Tipográfica Typst**: [`plantillas/libro_memorias.typ`](plantillas/libro_memorias.typ)
+* **Plantilla Tipográfica Typst (6 Capítulos)**: [`plantillas/libro_memorias.typ`](plantillas/libro_memorias.typ)
+* **Motor Automatizado y Workflow n8n**: [`operaciones/motor_biografo.py`](operaciones/motor_biografo.py), [`operaciones/n8n_whatsapp_biografo.json`](operaciones/n8n_whatsapp_biografo.json) y [`.env.example`](.env.example)
+* **Landing Page Pública y Configurador**: [`web/index.html`](web/index.html)
 
 ## 4. Guardarraíles y Privacidad
 * **Retención Cero de Datos**: Los modelos LLM y de transcripción se invocan bajo API con retención cero y sin entrenamiento con datos del usuario.
