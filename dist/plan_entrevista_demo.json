@@ -1,0 +1,719 @@
+{
+  "plan": {
+    "protagonista": "Antonio González Morera",
+    "compradores_hijos": [
+      "Laura",
+      "Carlos",
+      "Miguel"
+    ],
+    "perfiles_activos": [
+      "Rural",
+      "Oficio",
+      "Gastronomía",
+      "Nietos"
+    ],
+    "exclusiones": [],
+    "total_catalogo_leido": 126,
+    "total_preguntas_plan": 69,
+    "semanas": [
+      {
+        "semana": 1,
+        "titulo": "El Nido, los Cinco Sentidos y la Infancia",
+        "frase_apertura": "Hoy no vamos a hablar de fechas ni de historia; hoy quiero que viajemos con los ojos cerrados a la casa donde empezó todo, a los olores de la cocina y a las calles donde jugabas de niño/a.",
+        "preguntas": [
+          {
+            "id": "S1-T1",
+            "tipo": "troncal",
+            "categoria": "Troncal",
+            "titulo": "La arquitectura emocional del hogar",
+            "pregunta": "Si pudieras abrir hoy la puerta de la casa donde te criaste, ¿qué es lo primero que verías al entrar y en qué rincón de esa casa te sentías más a gusto?",
+            "disparador_sensorial": "La luz que entraba por la ventana, el frío del suelo o el calor del brasero/chimenea.",
+            "repregunta": "¿Qué ruidos se escuchaban en esa casa cuando todo el mundo se despertaba por la mañana?"
+          },
+          {
+            "id": "S1-T2",
+            "tipo": "troncal",
+            "categoria": "Troncal",
+            "titulo": "Los fogones de la infancia",
+            "pregunta": "Cuando volvías a casa con hambre, ¿qué olor salía de la cocina que te hacía saber desde la puerta qué había de comer?",
+            "disparador_sensorial": "El olor a pan recién cortado, el puchero hirviendo lento, el aceite o la leña.",
+            "repregunta": "Si hoy mismo pudieras volver a sentarte a esa mesa y pedir un solo plato hecho por las manos de tu madre o tu abuela, ¿cuál pedirías?"
+          },
+          {
+            "id": "S1-T3",
+            "tipo": "troncal",
+            "categoria": "Troncal",
+            "titulo": "El retrato de los padres",
+            "pregunta": "Háblame de tu padre y de tu madre cuando tú eras pequeño/a. ¿Cómo era el carácter de cada uno y cómo eran sus manos?",
+            "disparador_sensorial": "La textura de las manos (curtidas del trabajo o suaves), el tono de voz al llamarte por tu nombre.",
+            "repregunta": "¿Qué frase o dicho repetían siempre en casa que a ti se te quedó grabado para toda la vida?"
+          },
+          {
+            "id": "S1-T4",
+            "tipo": "troncal",
+            "categoria": "Troncal",
+            "titulo": "La calle como reino del juego",
+            "pregunta": "En aquellos años en los que no había pantallas y la vida se hacía en la calle, ¿a qué jugabais hasta que se hacía de noche y quién era tu compañero/a inseparable de aventuras?",
+            "disparador_sensorial": "Las rodillas raspadas, el sonido de las campanas o la voz de tu madre llamando desde el balcón/puerta para cenar.",
+            "repregunta": "¿Cómo os las ingeniabais para fabricar vuestros propios juguetes cuando no había dinero para comprarlos?"
+          },
+          {
+            "id": "S1-T5",
+            "tipo": "troncal",
+            "categoria": "Troncal",
+            "titulo": "La escuela y la pizarra",
+            "pregunta": "¿Cómo era el camino hacia tu escuela y cómo era aquel maestro o maestra que más respeto o cariño te inspiraba?",
+            "disparador_sensorial": "El olor a tiza, a tinta, a lápiz recién afilado, la cartera colgada o el frío en los dedos en invierno.",
+            "repregunta": "¿Qué era lo que mejor se te daba en el colegio y qué asignatura te costaba más?"
+          },
+          {
+            "id": "S1-T6",
+            "tipo": "troncal",
+            "categoria": "Troncal",
+            "titulo": "La gran travesura infantil",
+            "pregunta": "Todos de niños hemos hecho alguna trastada que guardamos en secreto. Cuéntame alguna travesura tuya o con tus hermanos de la que hoy te rías al recordarla.",
+            "disparador_sensorial": "El corazón latiendo deprisa por miedo a que os descubrieran y la risa contenida.",
+            "repregunta": "¿Se llegaron a enterar en casa o el secreto quedó a salvo?"
+          },
+          {
+            "id": "S1-O1",
+            "tipo": "optativa",
+            "categoria": "Raíces Rurales y Naturaleza",
+            "condicion": "",
+            "titulo": "Raíces Rurales y Naturaleza",
+            "pregunta": "¿Cómo era el ciclo del campo en tu pueblo? ¿Qué recuerdos tienes de los días de cosecha, vendimia o matanza cuando toda la familia ayudaba?",
+            "disparador_sensorial": "",
+            "repregunta": ""
+          },
+          {
+            "id": "S1-O2",
+            "tipo": "optativa",
+            "categoria": "Raíces Rurales y Naturaleza",
+            "condicion": "",
+            "titulo": "Raíces Rurales y Naturaleza",
+            "pregunta": "¿Había animales en casa o en el corral? ¿Tenías algún animal favorito al que cuidaras tú especialmente?",
+            "disparador_sensorial": "",
+            "repregunta": ""
+          },
+          {
+            "id": "S1-O3",
+            "tipo": "optativa",
+            "categoria": "Raíces Rurales y Naturaleza",
+            "condicion": "",
+            "titulo": "Raíces Rurales y Naturaleza",
+            "pregunta": "¿Dónde ibais a refrescaros en los días de calor sofocante de agosto: al río, a la acequia, al lavadero o a la fuente del pueblo?",
+            "disparador_sensorial": "",
+            "repregunta": ""
+          },
+          {
+            "id": "S1-O7",
+            "tipo": "optativa",
+            "categoria": "Los Abuelos y los Ancestros",
+            "condicion": "",
+            "titulo": "Los Abuelos y los Ancestros",
+            "pregunta": "¿Qué historias contaban tus abuelos sobre sus propios tiempos antiguos junto al fuego o después de cenar?",
+            "disparador_sensorial": "",
+            "repregunta": ""
+          },
+          {
+            "id": "S1-O8",
+            "tipo": "optativa",
+            "categoria": "Los Abuelos y los Ancestros",
+            "condicion": "",
+            "titulo": "Los Abuelos y los Ancestros",
+            "pregunta": "¿De dónde venía el apellido o el apodo de tu familia en el pueblo o barrio y qué significaba para vosotros llevarlo?",
+            "disparador_sensorial": "",
+            "repregunta": ""
+          },
+          {
+            "id": "S1-O13",
+            "tipo": "optativa",
+            "categoria": "Ingenio y Tiempos Difíciles",
+            "condicion": "",
+            "titulo": "Ingenio y Tiempos Difíciles",
+            "pregunta": "En épocas donde no sobraba nada, ¿qué milagros hacía tu madre para que un abrigo durara tres inviernos o para que en la mesa comieran todos?",
+            "disparador_sensorial": "",
+            "repregunta": ""
+          }
+        ]
+      },
+      {
+        "semana": 2,
+        "titulo": "El Despertar al Mundo, la Juventud y el Primer Amor",
+        "frase_apertura": "Hoy dejamos atrás al niño/a y nos vamos a tus 16, 18, 22 años... cuando empezaste a ganar tu propio pan, a arreglarte los domingos y a mirar el futuro con toda la fuerza de la juventud.",
+        "preguntas": [
+          {
+            "id": "S2-T1",
+            "tipo": "troncal",
+            "categoria": "Troncal",
+            "titulo": "El orgullo del primer jornal",
+            "pregunta": "Háblame de la primera vez que trabajaste y te pusieron en la mano tu primer sueldo o jornal. ¿En qué trabajabas y qué sentiste al llevar ese dinero a casa?",
+            "disparador_sensorial": "El tacto de los billetes o monedas de la época, el cansancio físico al final de la jornada.",
+            "repregunta": "¿Le entregaste el sobre a tu madre o te guardaste una parte para darte tu primer capricho?"
+          },
+          {
+            "id": "S2-T2",
+            "tipo": "troncal",
+            "categoria": "Troncal",
+            "titulo": "Los domingos de juventud y música",
+            "pregunta": "Cuando llegaba el domingo o el día de fiesta y os poníais la ropa de mudar, ¿a dónde ibais la cuadrilla de jóvenes a pasear o a bailar?",
+            "disparador_sensorial": "El olor a colonia o gomina, los zapatos limpios, el sonido de la orquesta o el tocadiscos en la plaza.",
+            "repregunta": "¿Qué canción de aquella época, si suena hoy en la radio, te transporta inmediatamente a tus veinte años?"
+          },
+          {
+            "id": "S2-T3",
+            "tipo": "troncal",
+            "categoria": "Troncal",
+            "titulo": "El instante de la primera mirada (o el gran amor)",
+            "pregunta": "Cuéntame cómo apareció en tu vida la persona con la que formaste tu camino. ¿Dónde os visteis por primera vez y qué fue lo que te llamó la atención de él/ella?",
+            "disparador_sensorial": "Cómo iba vestido/a, su sonrisa, el lugar exacto de la calle o del baile.",
+            "repregunta": "¿Quién dio el primer paso para hablar y qué excusa buscasteis para volver a coincidir?"
+          },
+          {
+            "id": "S2-T4",
+            "tipo": "troncal",
+            "categoria": "Troncal",
+            "titulo": "El arte del cortejo de antes",
+            "pregunta": "Hoy los jóvenes se escriben por el móvil, pero en tu época conquistar y noviar tenía sus propias reglas. ¿Cómo eran vuestros paseos de novios y cómo llevaban vuestros padres aquella relación?",
+            "disparador_sensorial": "Esperar en la esquina bajo la farola, el reloj marcando la hora límite para volver a casa, las manos rozándose.",
+            "repregunta": "¿Os escribisteis cartas en algún momento o guardasteis algún pequeño recuerdo de aquellos años de noviazgo?"
+          },
+          {
+            "id": "S2-T5",
+            "tipo": "troncal",
+            "categoria": "Troncal",
+            "titulo": "El gran viaje iniciático (La salida del nido)",
+            "pregunta": "¿Cómo fue la primera vez que saliste lejos de tu casa o de tu tierra por primera vez (ya fuera por trabajo, por un viaje o por el servicio militar)?",
+            "disparador_sensorial": "La maleta de madera o cartón, el humo y el traqueteo del tren, la despedida en el andén.",
+            "repregunta": "¿Qué fue lo que más te impresionó al ver por primera vez una ciudad grande o el mar?"
+          },
+          {
+            "id": "S2-T6",
+            "tipo": "troncal",
+            "categoria": "Troncal",
+            "titulo": "El día que empezó la nueva vida (La boda o emancipación)",
+            "pregunta": "Háblame del día en que os casasteis (o del día en que te independizaste para empezar tu vida adulta). ¿Cómo amaneció aquel día y qué anécdota curiosa ocurrió en la celebración?",
+            "disparador_sensorial": "El traje de novios, las flores, el convite familiar, los nervios en el estómago.",
+            "repregunta": "¿A dónde fuisteis de viaje de novios o dónde pasasteis vuestros primeros días juntos?"
+          },
+          {
+            "id": "S2-O4",
+            "tipo": "optativa",
+            "categoria": "Aprendices, Oficios y Primeros Trabajos",
+            "condicion": "",
+            "titulo": "Aprendices, Oficios y Primeros Trabajos",
+            "pregunta": "¿Quién fue el maestro o encargado que te enseñó a trabajar de joven? ¿Era duro contigo o te trataba con afecto?",
+            "disparador_sensorial": "",
+            "repregunta": ""
+          },
+          {
+            "id": "S2-O5",
+            "tipo": "optativa",
+            "categoria": "Aprendices, Oficios y Primeros Trabajos",
+            "condicion": "",
+            "titulo": "Aprendices, Oficios y Primeros Trabajos",
+            "pregunta": "¿A qué hora te levantabas para ir a trabajar cuando tenías 18 años y qué llevabas para almorzar a media mañana?",
+            "disparador_sensorial": "",
+            "repregunta": ""
+          },
+          {
+            "id": "S2-O6",
+            "tipo": "optativa",
+            "categoria": "Aprendices, Oficios y Primeros Trabajos",
+            "condicion": "",
+            "titulo": "Aprendices, Oficios y Primeros Trabajos",
+            "pregunta": "¿Tuviste alguna vez la tentación de dejarlo todo y dedicarte a otra vocación o sueño de juventud?",
+            "disparador_sensorial": "",
+            "repregunta": ""
+          }
+        ]
+      },
+      {
+        "semana": 3,
+        "titulo": "El Forjado del Destino, el Hogar Propio y la Crianza",
+        "frase_apertura": "Esta semana vamos al corazón de vuestra lucha: cómo levantasteis un techo con vuestras manos, cómo llegaron los hijos y cómo sacasteis a la familia adelante contra viento y marea.",
+        "preguntas": [
+          {
+            "id": "S3-T1",
+            "tipo": "troncal",
+            "categoria": "Troncal",
+            "titulo": "El primer techo propio",
+            "pregunta": "¿Cómo era la primera casa o piso donde empezasteis a vivir por vuestra cuenta? Aunque faltaran comodidades, ¿qué era lo que más ilusión os hacía de aquel hogar?",
+            "disparador_sensorial": "El olor a pintura recién dada, las llaves nuevas en el bolsillo, los primeros muebles comprados con letras.",
+            "repregunta": "¿Cómo fue el día en que por fin pudisteis decir 'esta casa ya es nuestra y no debemos nada a nadie'?"
+          },
+          {
+            "id": "S3-T2",
+            "tipo": "troncal",
+            "categoria": "Troncal",
+            "titulo": "El milagro de ser padres",
+            "pregunta": "¿Dónde estabas y qué sentiste en el pecho el día que nació tu primer hijo/a y lo viste por primera vez?",
+            "disparador_sensorial": "El llanto del recién nacido, el peso diminuto en los brazos, el olor de su piel.",
+            "repregunta": "Cuando llegasteis a casa la primera noche con el bebé, ¿os dio vértigo pensar 'y ahora cómo lo hacemos'?"
+          },
+          {
+            "id": "S3-T3",
+            "tipo": "troncal",
+            "categoria": "Troncal",
+            "titulo": "La historia secreta de los nombres",
+            "pregunta": "¿Por qué elegisteis los nombres de cada uno de vuestros hijos? ¿Venían por tradición familiar, por una promesa o porque os gustaban a vosotros?",
+            "disparador_sensorial": "Pronunciar el nombre de cada hijo en voz alta y recordar su cara de pequeño.",
+            "repregunta": "Si me tuvieras que definir con una sola palabra cómo era cada uno de tus hijos cuando tenían 5 o 6 años, ¿qué dirías de cada uno?"
+          },
+          {
+            "id": "S3-T4",
+            "tipo": "troncal",
+            "categoria": "Troncal",
+            "titulo": "La travesía del desierto (Años de esfuerzo)",
+            "pregunta": "En toda familia hay épocas en que el dinero viene justo o hay que doblar la espalda trabajando. ¿Cómo hacíais en casa para que a los niños nunca les faltara lo importante ni notaran las preocupaciones?",
+            "disparador_sensorial": "Las cuentas en un papel sobre la mesa de la cocina por la noche cuando los niños ya dormían.",
+            "repregunta": "Mirando atrás hoy, ¿de dónde sacabais tanta energía para trabajar todo el día y seguir tirando del carro?"
+          },
+          {
+            "id": "S3-T5",
+            "tipo": "troncal",
+            "categoria": "Troncal",
+            "titulo": "Las vacaciones en familia",
+            "pregunta": "Háblame de aquellos veranos o excursiones de domingo cuando los niños eran pequeños. ¿Cómo era meter a toda la familia y los bultos en el coche o en el tren?",
+            "disparador_sensorial": "El coche cargado hasta el techo, las canciones durante el viaje, la tortilla de patatas envuelta en papel de aluminio.",
+            "repregunta": "¿Hay algún verano en especial que recuerdes como el más feliz de aquella época?"
+          },
+          {
+            "id": "S3-T6",
+            "tipo": "troncal",
+            "categoria": "Troncal",
+            "titulo": "La huella en el oficio",
+            "pregunta": "A lo largo de todos tus años de trabajo (fuera o dentro de casa), ¿cuál es el logro, proyecto o momento del que te sientes más honrado y satisfecho?",
+            "disparador_sensorial": "Las herramientas del oficio, el uniforme o el lugar de trabajo.",
+            "repregunta": "¿Cuál era tu regla de oro para hacer las cosas bien hechas y poder mirar a todo el mundo a la cara?"
+          },
+          {
+            "id": "S3-O3",
+            "tipo": "optativa",
+            "categoria": "Anécdotas de la Crianza",
+            "condicion": "",
+            "titulo": "Anécdotas de la Crianza",
+            "pregunta": "¿Cómo eran las mañanas en casa antes de ir al colegio y al trabajo? ¿Quién se levantaba el primero a preparar los desayunos?",
+            "disparador_sensorial": "",
+            "repregunta": ""
+          },
+          {
+            "id": "S3-O4",
+            "tipo": "optativa",
+            "categoria": "Emigración y Cambio de Tierra",
+            "condicion": "Si emigraron",
+            "titulo": "Emigración y Cambio de Tierra",
+            "pregunta": "¿Cómo fue tomar la decisión de dejar vuestro pueblo o país para buscar un futuro mejor para la familia?",
+            "disparador_sensorial": "",
+            "repregunta": ""
+          },
+          {
+            "id": "S3-O5",
+            "tipo": "optativa",
+            "categoria": "Emigración y Cambio de Tierra",
+            "condicion": "",
+            "titulo": "Emigración y Cambio de Tierra",
+            "pregunta": "¿Qué sentías cada vez que volvías de visita al pueblo en verano y veías aparecer el campanario o las primeras casas en el horizonte?",
+            "disparador_sensorial": "",
+            "repregunta": ""
+          },
+          {
+            "id": "S3-O6",
+            "tipo": "optativa",
+            "categoria": "Oficios, Comercio y Vida Laboral",
+            "condicion": "",
+            "titulo": "Oficios, Comercio y Vida Laboral",
+            "pregunta": "¿Cómo cambió tu oficio desde que empezaste de joven hasta que te jubilaste? ¿Qué cosas se hacían antes a mano que hoy hacen las máquinas?",
+            "disparador_sensorial": "",
+            "repregunta": ""
+          },
+          {
+            "id": "S3-O7",
+            "tipo": "optativa",
+            "categoria": "Oficios, Comercio y Vida Laboral",
+            "condicion": "",
+            "titulo": "Oficios, Comercio y Vida Laboral",
+            "pregunta": "¿Tuviste algún socio, jefe o cliente que acabara convirtiéndose en un gran amigo de la familia?",
+            "disparador_sensorial": "",
+            "repregunta": ""
+          },
+          {
+            "id": "S3-O8",
+            "tipo": "optativa",
+            "categoria": "Oficios, Comercio y Vida Laboral",
+            "condicion": "",
+            "titulo": "Oficios, Comercio y Vida Laboral",
+            "pregunta": "¿Cómo viviste el día de tu jubilación? ¿Te costó acostumbrarte a no mirar el reloj por las mañanas o lo disfrutaste desde el primer minuto?",
+            "disparador_sensorial": "",
+            "repregunta": ""
+          },
+          {
+            "id": "S3-O11",
+            "tipo": "optativa",
+            "categoria": "Educación y Valores en la Mesa",
+            "condicion": "",
+            "titulo": "Educación y Valores en la Mesa",
+            "pregunta": "¿Qué era innegociable en la mesa de tu casa a la hora de comer o cenar juntos?",
+            "disparador_sensorial": "",
+            "repregunta": ""
+          },
+          {
+            "id": "S3-O12",
+            "tipo": "optativa",
+            "categoria": "Educación y Valores en la Mesa",
+            "condicion": "",
+            "titulo": "Educación y Valores en la Mesa",
+            "pregunta": "¿Qué sacrificio hiciste en silencio por tus hijos del que ellos quizás nunca se enteraron hasta que fueron mayores?",
+            "disparador_sensorial": "",
+            "repregunta": ""
+          }
+        ]
+      },
+      {
+        "semana": 4,
+        "titulo": "La Tribu, las Pasiones, la Mesa y las Costumbres",
+        "frase_apertura": "Hoy vamos a hablar de lo que le da sabor a la vida: los buenos amigos, las sobremesas largas, tus aficiones favoritas, la música, las recetas de casa y cómo superaste los días de tormenta.",
+        "preguntas": [
+          {
+            "id": "S4-T1",
+            "tipo": "troncal",
+            "categoria": "Troncal",
+            "titulo": "Los amigos del alma",
+            "pregunta": "A los amigos los elige uno mismo. ¿Quiénes han sido esos amigos o comadres de toda la vida con los que has compartido confidencias, alegrías y penas?",
+            "disparador_sensorial": "El sonido de las risas en una sobremesa, el café o la partida de cartas.",
+            "repregunta": "Cuéntame alguna anécdota divertida que vivieras con tus amigos en una cena, excursión o fiesta."
+          },
+          {
+            "id": "S4-T2",
+            "tipo": "troncal",
+            "categoria": "Troncal",
+            "titulo": "El refugio personal (La gran afición)",
+            "pregunta": "Cuando terminaban las obligaciones y tenías una tarde libre para ti, ¿qué era lo que más te gustaba hacer y te hacía perder la noción del tiempo?",
+            "disparador_sensorial": "El olor a tierra mojada en la huerta, el hilo y la aguja, la caña de pescar, las páginas de un libro o el estadio de fútbol.",
+            "repregunta": "¿Quién te contagió esa afición y a quién de la familia has intentado enseñársela?"
+          },
+          {
+            "id": "S4-T3",
+            "tipo": "troncal",
+            "categoria": "Troncal",
+            "titulo": "El patrimonio gastronómico de la casa",
+            "pregunta": "En toda familia hay un plato o postre legendario que sabe a hogar. ¿Cuál es la receta estrella de vuestra casa y cuál es el truco secreto para que salga en su punto?",
+            "disparador_sensorial": "El chup-chup de la cazuela, el aroma a canela, limón, ajo o sofrito lento.",
+            "repregunta": "¿Qué te dicen tus hijos o tus nietos cuando se sientan a la mesa y les pones ese plato delante?"
+          },
+          {
+            "id": "S4-T4",
+            "tipo": "troncal",
+            "categoria": "Troncal",
+            "titulo": "Las grandes fiestas y tradiciones familiares",
+            "pregunta": "¿Cómo era una Nochebuena, un cumpleaños o un día de fiesta grande en vuestra casa cuando os juntabais todos alrededor de la mesa?",
+            "disparador_sensorial": "El mantel de las ocasiones especiales, el ruido de las copas brindando, los villancicos o los chistes de sobremesa.",
+            "repregunta": "¿Quién era siempre el encargado de animar la fiesta o de contar las historias más graciosas?"
+          },
+          {
+            "id": "S4-T5",
+            "tipo": "troncal",
+            "categoria": "Troncal",
+            "titulo": "El viaje que se quedó en la retina",
+            "pregunta": "De todos los sitios que has conocido a lo largo de los años, ¿cuál ha sido el viaje o excursión que más te gustó y por qué te dejó tan buen recuerdo?",
+            "disparador_sensorial": "El paisaje, la comida del lugar, las fotografías hechas en aquel viaje.",
+            "repregunta": "¿Hay algún rincón del mundo o de nuestra tierra al que siempre te guste volver aunque sea con el pensamiento?"
+          },
+          {
+            "id": "S4-T6",
+            "tipo": "troncal",
+            "categoria": "Troncal",
+            "titulo": "El arte de capear el temporal (Resiliencia)",
+            "pregunta": "La vida también trae curvas difíciles, sustos de salud o pérdidas que duelen. Cuando te tocó pasar por tu momento más duro, ¿a qué te agarraste para no rendirte y salir a flote?",
+            "disparador_sensorial": "Una mano apretando la tuya, la calma después de la tormenta.",
+            "repregunta": "¿Qué aprendiste de tu propia fortaleza en aquel momento que antes no sabías que tenías?"
+          },
+          {
+            "id": "S4-O1",
+            "tipo": "optativa",
+            "categoria": "Gastronomía, Bodega y Sobremesa",
+            "condicion": "",
+            "titulo": "Gastronomía, Bodega y Sobremesa",
+            "pregunta": "¿Cómo era el ritual del aperitivo de los domingos? ¿Qué no podía faltar nunca en esa mesa antes de comer?",
+            "disparador_sensorial": "",
+            "repregunta": ""
+          },
+          {
+            "id": "S4-O2",
+            "tipo": "optativa",
+            "categoria": "Gastronomía, Bodega y Sobremesa",
+            "condicion": "",
+            "titulo": "Gastronomía, Bodega y Sobremesa",
+            "pregunta": "¿Eres más de dulce o de salado? ¿Cuál es ese bocado sencillo (como un buen pan con aceite, queso o chocolate) que para ti es un manjar de reyes?",
+            "disparador_sensorial": "",
+            "repregunta": ""
+          },
+          {
+            "id": "S4-O3",
+            "tipo": "optativa",
+            "categoria": "Gastronomía, Bodega y Sobremesa",
+            "condicion": "",
+            "titulo": "Gastronomía, Bodega y Sobremesa",
+            "pregunta": "En las sobremesas largas de café y tertulia, ¿se jugaba en casa a las cartas, al dominó o al parchís? ¿Quién tenía peor perder en la familia?",
+            "disparador_sensorial": "",
+            "repregunta": ""
+          },
+          {
+            "id": "S4-O4",
+            "tipo": "optativa",
+            "categoria": "Manos Creadoras, Tierra y Deporte",
+            "condicion": "Si le gusta el campo/jardín",
+            "titulo": "Manos Creadoras, Tierra y Deporte",
+            "pregunta": "¿Qué se siente al plantar un árbol o cuidar una huerta/macetas y ver cómo da fruto con tus propias manos?",
+            "disparador_sensorial": "",
+            "repregunta": ""
+          },
+          {
+            "id": "S4-O5",
+            "tipo": "optativa",
+            "categoria": "Manos Creadoras, Tierra y Deporte",
+            "condicion": "Si le gusta la artesanía/costura/bricolaje",
+            "titulo": "Manos Creadoras, Tierra y Deporte",
+            "pregunta": "¿Qué cosas hechas o arregladas por tus manos hay repartidas por tu casa o por las casas de tus hijos?",
+            "disparador_sensorial": "",
+            "repregunta": ""
+          },
+          {
+            "id": "S4-O6",
+            "tipo": "optativa",
+            "categoria": "Manos Creadoras, Tierra y Deporte",
+            "condicion": "Si es aficionado al fútbol/deporte",
+            "titulo": "Manos Creadoras, Tierra y Deporte",
+            "pregunta": "¿De qué equipo has sido toda la vida y cuál es el partido o victoria que celebraste con más pasión?",
+            "disparador_sensorial": "",
+            "repregunta": ""
+          },
+          {
+            "id": "S4-O13",
+            "tipo": "optativa",
+            "categoria": "Historia Viva: Testigo de un Siglo",
+            "condicion": "",
+            "titulo": "Historia Viva: Testigo de un Siglo",
+            "pregunta": "¿Qué costumbre antigua de los pueblos o de los barrios se ha perdido hoy y a ti te encantaría que volviera?",
+            "disparador_sensorial": "",
+            "repregunta": ""
+          }
+        ]
+      },
+      {
+        "semana": 5,
+        "titulo": "La Gracia de ser Abuelo y el Eslabón entre Generaciones",
+        "frase_apertura": "Dicen que los hijos se crían con responsabilidad y los nietos se disfrutan con el alma. Hoy vamos a hablar de esa segunda juventud que traen los nietos y de cómo ves hoy a la familia que has creado.",
+        "preguntas": [
+          {
+            "id": "S5-T1",
+            "tipo": "troncal",
+            "categoria": "Troncal",
+            "titulo": "El nacimiento de una nueva generación",
+            "pregunta": "¿Qué sentiste la primera vez que te pusieron en brazos a tu primer nieto/a (o al primer niño de la nueva generación familiar) y pensaste 'la vida continúa'?",
+            "disparador_sensorial": "Las manitas diminutas agarrando tu dedo, el olor a bebé, la mirada de tu propio hijo/a convertido en padre o madre.",
+            "repregunta": "¿En qué se diferencia el amor de padre/madre del amor de abuelo/a?"
+          },
+          {
+            "id": "S5-T2",
+            "tipo": "troncal",
+            "categoria": "Troncal",
+            "titulo": "El pacto secreto con los nietos",
+            "pregunta": "Seamos sinceros: ¿es verdad que en casa de los abuelos se consienten cosas que en casa de los padres estaban prohibidas? ¿Qué complicidades o secretos tienes con tus nietos?",
+            "disparador_sensorial": "El guiño cómplice, el dulce o la propina dada a escondidas en el pasillo.",
+            "repregunta": "¿Qué es lo que más les gusta hacer a tus nietos cuando vienen a verte o a comer a tu casa?"
+          },
+          {
+            "id": "S5-T3",
+            "tipo": "troncal",
+            "categoria": "Troncal",
+            "titulo": "El espejo de la genética y el carácter",
+            "pregunta": "Cuando observas hoy a tus hijos y a tus nietos hablar, reírse o mover las manos, ¿qué gestos o rasgos tuyos (o de tu pareja) reconoces en ellos?",
+            "disparador_sensorial": "Una forma de fruncir el ceño, un golpe de risa idéntico, el pronto o la nobleza.",
+            "repregunta": "¿Te produce orgullo ver que esa chispa vuestra sigue viva en ellos?"
+          },
+          {
+            "id": "S5-T4",
+            "tipo": "troncal",
+            "categoria": "Troncal",
+            "titulo": "La mirada hacia los hijos ya adultos",
+            "pregunta": "Tus hijos ya no son aquellos niños pequeños; hoy son hombres y mujeres hechos y derechos. ¿Qué es lo que más admiras de ellos cuando los ves luchar en su día a día?",
+            "disparador_sensorial": "Ver a tus hijos entrar por la puerta hoy, el abrazo al llegar.",
+            "repregunta": "¿En qué momento los miraste y te dijiste por dentro: 'ha merecido la pena todo nuestro esfuerzo'?"
+          },
+          {
+            "id": "S5-T5",
+            "tipo": "troncal",
+            "categoria": "Troncal",
+            "titulo": "El puente entre dos mundos",
+            "pregunta": "Tú que naciste en un mundo de cartas de papel y hoy hablas por videollamada o WhatsApp, ¿qué es lo que más te maravilla de la vida moderna y qué te parece que va demasiado deprisa?",
+            "disparador_sensorial": "El contraste entre el brasero de antaño y el teléfono inteligente en la mano.",
+            "repregunta": "¿Qué deberían aprender los jóvenes de hoy de la forma de vivir que teníais vosotros a los veinte años?"
+          },
+          {
+            "id": "S5-T6",
+            "tipo": "troncal",
+            "categoria": "Troncal",
+            "titulo": "Las raíces que no deben cortarse",
+            "pregunta": "Cuando tú ya no estés físicamente, ¿qué costumbre familiar os gustaría que tus hijos y tus nietos siguieran manteniendo para no perder nunca el contacto entre ellos?",
+            "disparador_sensorial": "La mesa familiar reunida, los hermanos unidos apoyándose.",
+            "repregunta": "¿Por qué es tan importante para ti que los hermanos y primos se quieran y hagan piña siempre?"
+          },
+          {
+            "id": "S5-O1",
+            "tipo": "optativa",
+            "categoria": "Anécdotas y Ternura con los Nietos",
+            "condicion": "",
+            "titulo": "Anécdotas y Ternura con los Nietos",
+            "pregunta": "¿Cómo te llaman tus nietos y cómo surgió ese nombre o apelativo cariñoso?",
+            "disparador_sensorial": "",
+            "repregunta": ""
+          },
+          {
+            "id": "S5-O2",
+            "tipo": "optativa",
+            "categoria": "Anécdotas y Ternura con los Nietos",
+            "condicion": "",
+            "titulo": "Anécdotas y Ternura con los Nietos",
+            "pregunta": "Cuéntame alguna ocurrencia o frase genial que te haya soltado alguno de tus nietos cuando era pequeñito y que te dejara sin palabras.",
+            "disparador_sensorial": "",
+            "repregunta": ""
+          },
+          {
+            "id": "S5-O3",
+            "tipo": "optativa",
+            "categoria": "Anécdotas y Ternura con los Nietos",
+            "condicion": "",
+            "titulo": "Anécdotas y Ternura con los Nietos",
+            "pregunta": "¿Qué historia de tu juventud les gusta más que les cuentes cuando se sientan a escucharte?",
+            "disparador_sensorial": "",
+            "repregunta": ""
+          },
+          {
+            "id": "S5-O4",
+            "tipo": "optativa",
+            "categoria": "Anécdotas y Ternura con los Nietos",
+            "condicion": "",
+            "titulo": "Anécdotas y Ternura con los Nietos",
+            "pregunta": "Si me tuvieras que dedicar unas palabras a cada uno de tus nietos por su nombre, ¿qué tiene de especial cada uno de ellos?",
+            "disparador_sensorial": "",
+            "repregunta": ""
+          },
+          {
+            "id": "S5-O5",
+            "tipo": "optativa",
+            "categoria": "Alternativa si NO tiene Nietos (Hijos, Sobrinos, Ahijados)",
+            "condicion": "",
+            "titulo": "Alternativa si NO tiene Nietos (Hijos, Sobrinos, Ahijados)",
+            "pregunta": "Háblame de los niños o jóvenes de la familia (sobrinos, ahijados, hijos de amigos) con los que has tenido un vínculo especial de cariño.",
+            "disparador_sensorial": "",
+            "repregunta": ""
+          },
+          {
+            "id": "S5-O6",
+            "tipo": "optativa",
+            "categoria": "Alternativa si NO tiene Nietos (Hijos, Sobrinos, Ahijados)",
+            "condicion": "",
+            "titulo": "Alternativa si NO tiene Nietos (Hijos, Sobrinos, Ahijados)",
+            "pregunta": "¿Qué es lo que más disfrutas de conversar con la gente joven de hoy en día?",
+            "disparador_sensorial": "",
+            "repregunta": ""
+          }
+        ]
+      },
+      {
+        "semana": 6,
+        "titulo": "La Cosecha Vital, la Gratitud y la Carta al Futuro",
+        "frase_apertura": "Llegamos al último capítulo de nuestro viaje. Hoy no miramos un año concreto, sino toda la montaña que has subido. Es el momento de recoger la cosecha, dar las gracias y dejar tus palabras para el futuro.",
+        "preguntas": [
+          {
+            "id": "S6-T1",
+            "tipo": "troncal",
+            "categoria": "Troncal",
+            "titulo": "Carta al joven que fuiste",
+            "pregunta": "Imagina que pudieras sentarte cinco minutos en un banco con aquel muchacho / aquella muchacha de 18 años que eras tú, lleno de incertidumbre por el futuro. ¿Qué le dirías al oído para tranquilizarle?",
+            "disparador_sensorial": "Verse a sí mismo en una foto antigua de juventud.",
+            "repregunta": "Con todo lo que sabes hoy de la vida, ¿volverías a recorrer el mismo camino con sus luces y sus sombras?"
+          },
+          {
+            "id": "S6-T2",
+            "tipo": "troncal",
+            "categoria": "Troncal",
+            "titulo": "El altar de la gratitud",
+            "pregunta": "Nadie llega lejos completamente solo. Mirando toda tu vida, ¿a qué persona o personas les llevas un agradecimiento eterno en el corazón por lo que hicieron por ti?",
+            "disparador_sensorial": "El rostro de esa persona querida (padres, pareja, hermano, amigo).",
+            "repregunta": "Si te estuviera escuchando ahora mismo, ¿qué le dirías?"
+          },
+          {
+            "id": "S6-T3",
+            "tipo": "troncal",
+            "categoria": "Troncal",
+            "titulo": "El secreto del amor y la convivencia",
+            "pregunta": "Para los jóvenes que hoy empiezan a construir una familia y a veces se rinden al primer tropiezo, ¿cuál ha sido para ti el verdadero secreto para querer bien y mantenerse unidos a través de las décadas?",
+            "disparador_sensorial": "Dos manos entrelazadas después de toda una vida.",
+            "repregunta": "¿Qué es lo que hay que perdonar rápido y qué es lo que hay que cuidar todos los días?"
+          },
+          {
+            "id": "S6-T4",
+            "tipo": "troncal",
+            "categoria": "Troncal",
+            "titulo": "La definición de una buena vida",
+            "pregunta": "Después de tantos años viendo pasar el mundo, ¿qué has descubierto que es el verdadero éxito en la vida y qué cosas nos quitan el sueño sin tener ninguna importancia?",
+            "disparador_sensorial": "La paz de una tarde tranquila con la conciencia en calma.",
+            "repregunta": "¿Cuál ha sido tu brújula para distinguir lo que vale la pena de lo que no?"
+          },
+          {
+            "id": "S6-T5",
+            "tipo": "troncal",
+            "categoria": "Troncal",
+            "titulo": "El mensaje directo a los hijos (Grabación íntegra para QR)",
+            "pregunta": "Tus hijos te han regalado este libro porque te admiran y quieren guardar tu historia para siempre. Háblales directamente a ellos ahora: ¿qué sientes por ellos y qué quieres agradecerles?",
+            "disparador_sensorial": "**No interrumpir**. Dejar grabar esta pista de audio íntegra para el código QR maestro del capítulo final.",
+            "repregunta": "¿De qué quieres que se sientan tranquilos y en paz respecto a ti?"
+          },
+          {
+            "id": "S6-T6",
+            "tipo": "troncal",
+            "categoria": "Troncal",
+            "titulo": "La cápsula del tiempo para los bisnietos (Dentro de 50 años)",
+            "pregunta": "Imagina que dentro de 50 o 60 años, un bisnieto o tataranieto tuyo abre este libro encuadernado, escanea el código con su teléfono y escucha tu voz por primera vez. ¿Qué consejo de vida y qué bendición le dejas como herencia?",
+            "disparador_sensorial": "**Pista final del libro (Cierre de Oro)**.",
+            "repregunta": "¿Cómo te gustaría que te recordaran cada vez que alguien de la familia pronuncie tu nombre en una sobremesa?"
+          },
+          {
+            "id": "S6-O1",
+            "tipo": "optativa",
+            "categoria": "Sabiduría, Paz y Reconciliación",
+            "condicion": "",
+            "titulo": "Sabiduría, Paz y Reconciliación",
+            "pregunta": "Ahora que tienes la edad que tenían tus padres o abuelos cuando eran mayores, ¿hay algo de ellos que hoy entiendas mucho mejor que cuando eras joven?",
+            "disparador_sensorial": "",
+            "repregunta": ""
+          },
+          {
+            "id": "S6-O6",
+            "tipo": "optativa",
+            "categoria": "Valores e Identidad Familiar",
+            "condicion": "",
+            "titulo": "Valores e Identidad Familiar",
+            "pregunta": "Ante la adversidad o las malas rachas económicas, ¿cuál es tu receta para no perder nunca la dignidad ni la alegría?",
+            "disparador_sensorial": "",
+            "repregunta": ""
+          },
+          {
+            "id": "S6-O12",
+            "tipo": "optativa",
+            "categoria": "El Epílogo del Libro",
+            "condicion": "",
+            "titulo": "El Epílogo del Libro",
+            "pregunta": "Si levantáramos ahora mismo una copa con todos tus hijos y nietos alrededor de la mesa, ¿por qué brindarías?",
+            "disparador_sensorial": "",
+            "repregunta": ""
+          }
+        ]
+      }
+    ]
+  },
+  "ejemplo_mensaje_whatsapp_semana_1": "Hola Antonio, ¿qué tal ha ido el día? Soy tu biógrafo de Memorias Vivas.\nEsta semana estamos preparando el capítulo 1 de tu historia.\nHoy no vamos a hablar de fechas ni de historia; hoy quiero que viajemos con los ojos cerrados a la casa donde empezó todo, a los olores de la cocina y a las calles donde jugabas de niño/a.\n\nCuando estés cómodo/a, mándame una nota de voz contándome:\n«Si pudieras abrir hoy la puerta de la casa donde te criaste, ¿qué es lo primero que verías al entrar y en qué rincón de esa casa te sentías más a gusto?»\n\n(Para ayudarte a entrar en ese momento, piensa en: La luz que entraba por la ventana, el frío del suelo o el calor del brasero/chimenea.)\n\nSin ninguna prisa: pulsa el micrófono cuando te apetezca y cuéntalo como si estuviéramos tomando un café.",
+  "ejemplo_bloque_typst": "// --- CAPÍTULO I ---\n= Capítulo I: La casa del arroyo y los veranos sin reloj\n\n#bloque_qr(\n  \"Escanea el código para escuchar la voz original en este capítulo.\",\n  \"MV-01\",\n  \"03:42\"\n)\n\nSi cierro los ojos todavía huelo a leña húmeda y a romero recién cortado. En aquella casa baja junto al recodo del arroyo nos levantaba el cantar de los gallos y el puchero de los domingos reunía a toda la familia alrededor del hule.\n\n#pagebreak()\n"
+}
